@@ -37,28 +37,25 @@ img{max-width:100%}
 
 /* NAV */
 nav{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:0;height:68px}
-.nav-logo{display:flex;align-items:center;gap:.6rem;margin-right:2rem;flex-shrink:0}
-.nav-logo-mark{display:flex;align-items:center;flex-shrink:0}
-.nav-logo-mark img{height:42px;width:auto;display:block}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:68px}
+.nav-logo{display:flex;align-items:center;gap:.75rem;margin-right:2.5rem;flex-shrink:0;text-decoration:none}
+.nav-logo-mark{display:block;flex-shrink:0}
+.nav-logo-mark img{height:40px;width:auto;display:block;max-width:none}
 .nav-logo-mark svg{display:none}
-.nav-logo-text{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--green);line-height:1.1}
-.nav-logo-text span{display:block;font-weight:400;font-size:.65rem;color:var(--gray-600);letter-spacing:.04em;text-transform:uppercase}
 .nav-links{display:flex;align-items:stretch;flex:1;height:100%}
-.nav-links a{display:flex;align-items:center;padding:0 1.1rem;font-size:.85rem;font-weight:500;color:var(--gray-800);white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;gap:.3rem;position:relative}
-.nav-links a:hover,.nav-links a.active{color:var(--green);border-bottom-color:var(--green)}
-.nav-dropdown{position:relative}
-.nav-dropdown-menu{position:absolute;top:100%;left:0;background:white;border:1px solid var(--gray-200);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.1);min-width:200px;padding:.5rem 0;display:none;z-index:200}
+.nav-links>a,.nav-dropdown>a{display:flex;align-items:center;padding:0 1.1rem;font-size:.85rem;font-weight:500;color:var(--gray-800);white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;height:100%}
+.nav-links>a:hover,.nav-links>a.active,.nav-dropdown>a:hover,.nav-dropdown>a.active{color:var(--green);border-bottom-color:var(--green)}
+.nav-dropdown{position:relative;display:flex;align-items:stretch}
+.nav-dropdown-menu{position:absolute;top:100%;left:0;background:white;border:1px solid var(--gray-200);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.1);min-width:210px;padding:.5rem 0;display:none;z-index:200}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
-.nav-dropdown-menu a{display:block;padding:.6rem 1.25rem;font-size:.83rem;color:var(--gray-800);border-bottom:none !important;white-space:nowrap}
+.nav-dropdown-menu a{display:block;padding:.65rem 1.25rem;font-size:.83rem;color:var(--gray-800);white-space:nowrap;border:none!important}
 .nav-dropdown-menu a:hover{background:var(--green-light);color:var(--green)}
 .nav-actions{display:flex;align-items:center;gap:.75rem;margin-left:auto;flex-shrink:0}
 .nav-phone{display:flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;color:var(--green);padding:.5rem .9rem;border:2px solid var(--green);border-radius:4px;transition:all .2s}
 .nav-phone:hover{background:var(--green);color:white}
-.nav-phone svg{width:15px;height:15px}
+.nav-phone svg{width:15px;height:15px;flex-shrink:0}
 .btn-quote{background:var(--orange);color:white;padding:.55rem 1.3rem;border-radius:4px;font-size:.85rem;font-weight:600;transition:background .2s}
 .btn-quote:hover{background:#d0551a}
-
 /* HERO */
 .hero{background:var(--off-white);overflow:hidden}
 .hero-inner{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
@@ -269,13 +266,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <div class="nav-logo-mark">
-        <img src="images/logo-icon.png" alt="Nature Flooring" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" style="display:none">
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
+        <img src="images/logo-icon.png" alt="Nature Flooring">
       </div>
-
     </a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
