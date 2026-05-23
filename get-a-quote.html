@@ -232,23 +232,68 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <p>Fill in your details and we'll contact you within 24 hours to arrange a consultation.</p>
         </div>
         <div class="qfb-body">
-          <iframe 
-  src="https://docs.google.com/forms/d/e/1FAIpQLSe0-35TWV9UU1DZtMuHZemr-om8aZTOH09mxdv4P1nAqYv23w/viewform?embedded=true" 
-  width="100%" 
-  height="900" 
-  frameborder="0" 
-  marginheight="0" 
-  marginwidth="0"
-  style="display:block;border-radius:4px"
-  title="Nature Flooring Quote Request">
-  Loading form…
-</iframe>
-<p style="font-size:.75rem;color:var(--gray-600);text-align:center;margin-top:.75rem">
-  Or call us directly: <a href="tel:0411958958" style="color:var(--green);font-weight:600">0411 958 958</a>
-</p>
+          <form id="quoteForm" novalidate>
+            <div class="fg-row">
+              <div class="fg">
+                <label for="fname">First Name <span class="req">*</span></label>
+                <input type="text" id="fname" name="entry.1250200088" placeholder="e.g. Sarah" required autocomplete="given-name">
+              </div>
+              <div class="fg">
+                <label for="lname">Last Name <span class="req">*</span></label>
+                <input type="text" id="lname" name="entry.1903396500" placeholder="e.g. Johnson" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="fg">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="entry.1679153909" placeholder="your@email.com" required autocomplete="email">
+            </div>
+            <div class="fg">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="entry.30857566" placeholder="e.g. 0400 000 000" required autocomplete="tel">
+            </div>
+            <div class="fg">
+              <label for="suburb">Suburb / Location</label>
+              <input type="text" id="suburb" name="entry.1100598602" placeholder="e.g. Sunnybank, Gold Coast, Ipswich" autocomplete="address-level2">
+            </div>
+            <div class="fg-row">
+              <div class="fg">
+                <label for="ftype">Flooring Type</label>
+                <input type="text" id="ftype" name="entry.1987813900" placeholder="e.g. SPC Hybrid, Engineered Timber…">
+              </div>
+              <div class="fg">
+                <label for="area">Approximate Area (m²)</label>
+                <input type="text" id="area" name="entry.422928783" placeholder="e.g. 45m², whole house, 3 bedrooms…">
+              </div>
+            </div>
+            <div class="fg">
+              <label for="ptype">Project Type</label>
+              <input type="text" id="ptype" name="entry.575512670" placeholder="e.g. Residential renovation, new build, office fit-out…">
+            </div>
+            <div class="fg">
+              <label for="msg">Additional Details</label>
+              <textarea id="msg" name="entry.781182990" placeholder="Tell us about your project — current flooring, special requirements, preferred timeline, etc."></textarea>
+            </div>
 
+            <button type="submit" class="form-submit" id="submitBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Quote Request
+            </button>
+            <div class="form-note">
+              🔒 Your details are kept private and never shared with third parties.<br>
+              We'll call or email you within 1 business day to arrange your free consultation.
+            </div>
+            <div class="error-msg" id="errorMsg" style="display:none">
+              Something went wrong. Please try again or call us on <a href="tel:0411958958" style="color:var(--orange);font-weight:600">0411 958 958</a>.
+            </div>
+          </form>
+
+          <div class="success-msg" id="successMsg" style="display:none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h4>Quote request sent!</h4>
+            <p>Thank you! We'll be in touch within 1 business day to arrange your free in-home consultation.</p>
+            <p style="margin-top:.5rem;font-size:.82rem">Or call us now: <a href="tel:0411958958" style="color:var(--green);font-weight:600">0411 958 958</a></p>
           </div>
-      </div>
+        </div></div>
 
     </div>
   </div>
@@ -258,7 +303,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   <div class="areas-inner">
     <div class="areas-text">
       <h2>📍 We Service All of South East Queensland</h2>
-      <p>Free delivery and professional installation available across Brisbane and surrounds</p>
+      <p>Free in-home quotes available throughout the region</p>
     </div>
     <div class="chips">
       <span class="chip">Brisbane CBD</span><span class="chip">Acacia Ridge</span>
@@ -273,7 +318,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   <div class="ft">
     <div>
       <div class="fl-text">Nature Flooring</div>
-      <div class="fl-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd.<br>Premium eco-certified flooring for residential and commercial spaces across Queensland.<br>QBCC: 15312707 · ABN: 50646948281</div>
+      <div class="fl-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd. QBCC: 15312707 · ABN: 50646948281</div>
       <div class="fl-contact">
         <div>📍 22/37 Mortimer Road, Acacia Ridge QLD 4110</div>
         <div>📞 <a href="tel:0411958958">0411 958 958</a></div>
@@ -281,41 +326,65 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         <div>🕐 Mon–Fri 9am–5pm · Sat 10am–4pm</div>
       </div>
     </div>
-    <div>
-      <div class="fh">Products</div>
-      <ul class="fl">
-        <li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li>
-        <li><a href="products.html">All Products</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fh">Services</div>
-      <ul class="fl">
-        <li><a href="services.html">Free Consultation</a></li>
-        <li><a href="services.html">Residential Installation</a></li>
-        <li><a href="services.html">Commercial Projects</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fh">Company</div>
-      <ul class="fl">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="get-a-quote.html">Get a Quote</a></li>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </div>
+    <div><div class="fh">Products</div><ul class="fl"><li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li><li><a href="products.html">All Products</a></li></ul></div>
+    <div><div class="fh">Services</div><ul class="fl"><li><a href="services.html">Free Consultation</a></li><li><a href="services.html">Residential Installation</a></li><li><a href="services.html">Commercial Projects</a></li></ul></div>
+    <div><div class="fh">Company</div><ul class="fl"><li><a href="about.html">About Us</a></li><li><a href="get-a-quote.html">Get a Quote</a></li></ul></div>
   </div>
   <div class="fb">
-    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707 · All rights reserved</span>
-    <div class="fb-links">
-      <a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a>
-      <a href="#" style="color:rgba(255,255,255,.3)">Terms of Use</a>
-    </div>
+    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707</span>
+    <div class="fb-links"><a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a></div>
   </div>
 </footer>
+<script>
+const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe0-35TWV9UU1DZtMuHZemr-om8aZTOH09mxdv4P1nAqYv23w/formResponse';
+const form = document.getElementById('quoteForm');
+const btn  = document.getElementById('submitBtn');
+const successMsg = document.getElementById('successMsg');
+const errorMsg   = document.getElementById('errorMsg');
 
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  errorMsg.style.display = 'none';
 
+  let valid = true;
+  form.querySelectorAll('[required]').forEach(el => {
+    el.style.borderColor = '';
+    if (!el.value.trim()) {
+      el.style.borderColor = '#E8621A';
+      if (valid) el.focus();
+      valid = false;
+    }
+  });
+  if (!valid) return;
 
+  const emailEl = document.getElementById('email');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+    emailEl.style.borderColor = '#E8621A';
+    emailEl.focus();
+    return;
+  }
 
+  btn.disabled = true;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 11-18 0"/></svg> Sending…';
+
+  const fd = new FormData(form);
+
+  try {
+    await fetch(FORM_URL, { method: 'POST', mode: 'no-cors', body: fd });
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+    successMsg.scrollIntoView({behavior: 'smooth', block: 'center'});
+  } catch(err) {
+    btn.disabled = false;
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Quote Request';
+    errorMsg.style.display = 'block';
+  }
+});
+
+form.querySelectorAll('input, textarea').forEach(el => {
+  el.addEventListener('input', () => el.style.borderColor = '');
+});
+</script>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 </body>
 </html>
