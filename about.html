@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Nature Flooring Brisbane</title>
+<meta name="description" content="About Nature Flooring — Australia's exclusive distributor for Nature Home (China) Co., Ltd. Premium eco-certified flooring for Brisbane and South East Queensland since 1995.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0}
+.about-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);aspect-ratio:4/3;background:linear-gradient(135deg,#C4A070,#8B6B45);position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block}
+.about-img-overlay{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(0,0,0,.04) 80px,rgba(0,0,0,.04) 82px)}
+.about-text h2{font-family:'Manrope',sans-serif;font-size:1.8rem;font-weight:800;color:var(--text);margin-bottom:1rem}
+.about-text p{font-size:.93rem;color:var(--gray-600);line-height:1.75;margin-bottom:1rem}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.stat-card{background:var(--off-white);border:1px solid var(--gray-200);border-radius:8px;padding:1.25rem;text-align:center}
+.stat-num{font-family:'Manrope',sans-serif;font-size:2rem;font-weight:800;color:var(--green);line-height:1}
+.stat-label{font-size:.75rem;color:var(--gray-600);margin-top:.3rem}
+.credentials{background:var(--off-white);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:3rem 0}
+.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.cred-item{background:white;border:1px solid var(--gray-200);border-radius:8px;padding:1.5rem;text-align:center}
+.cred-icon{font-size:2rem;margin-bottom:.75rem}
+.cred-label{font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.3rem}
+.cred-value{font-size:.95rem;font-weight:700;color:var(--text)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;padding:4rem 0}
+.contact-info h2{font-family:'Manrope',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:1.5rem}
+.contact-row{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--gray-100)}
+.contact-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.contact-icon{width:40px;height:40px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:20px;height:20px;color:var(--green)}
+.contact-label{font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.2rem}
+.contact-value{font-size:.93rem;color:var(--text);font-weight:500}
+.contact-value a{color:var(--green)}
+.map-embed{border-radius:8px;overflow:hidden;border:1px solid var(--gray-200)}
+@media(max-width:1024px){.about-grid{grid-template-columns:1fr;gap:2rem}.about-img{display:none}.contact-grid{grid-template-columns:1fr}.cred-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.about-stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>🌿 Australia's exclusive distributor for <strong>Nature Home (China) Co., Ltd.</strong></span>
+  <div class="topbar-divider"></div>
+  <span>📍 Acacia Ridge, Brisbane QLD</span>
+  <div class="topbar-divider"></div>
+  <span>📞 <strong>0411 958 958</strong></span>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="images/logo-icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" style="display:none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="nav-logo-text">Nature Flooring<span>Brisbane's exclusive eco flooring specialist</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="products.html">Products ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="products-spc-hybrid.html">SPC Hybrid Flooring</a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <div class="nav-dropdown">
+        <a href="about.html" class="active">About Us ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="get-a-quote.html">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:0411958958" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        0411 958 958
+      </a>
+      <a href="get-a-quote.html" class="btn-quote">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>About Us</span>
+    </div>
+    <h1>About Nature Flooring</h1>
+    <p>Australia's exclusive distributor for Nature Home (China) Co., Ltd. — bringing world-class, eco-certified flooring to Brisbane and South East Queensland.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section style="padding:0">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Australia's Exclusive Partner for Nature Home China</h2>
+        <p>As the exclusive authority for Nature Flooring products in Australia, we are proud to bring the exceptional quality and innovative designs of Nature Home (China) Co., Ltd. to the Australian market. With a rich heritage dating back to 1995, Nature Home is a renowned leader in the flooring industry, known for its commitment to environmentally friendly and health-conscious products suitable for commercial, industrial, and residential applications.</p>
+        <p>Our exclusive partnership allows us to offer a wide range of premium flooring solutions under the Nature Flooring brand. With a focus on sustainability and design, we aim to transform spaces across Australia with our high-quality offerings.</p>
+        <p>We are dedicated to providing exceptional customer service and expert guidance, ensuring that our clients find the perfect solutions for their home and business needs. As the sole distributor, we are committed to upholding the highest standards of quality and innovation that Nature Home represents.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">1995</div>
+            <div class="stat-label">Year Nature Home Founded</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">10</div>
+            <div class="stat-label">Year Product Warranty</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">SEQ</div>
+            <div class="stat-label">Service Coverage</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-img" style="position:relative">
+        <img src="images/Hybrid-Flooring-2024_page-0003.jpg" alt="Nature Flooring - premium SPC hybrid flooring Brisbane" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div class="about-img-overlay" style="position:absolute;inset:0"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<div class="credentials">
+  <div class="section-inner">
+    <h2 style="font-family:'Manrope',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:1.5rem">Our Credentials</h2>
+    <div class="cred-grid">
+      <div class="cred-item">
+        <div class="cred-icon">🏗️</div>
+        <div class="cred-label">QBCC Licence</div>
+        <div class="cred-value">15312707</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🏢</div>
+        <div class="cred-label">ABN</div>
+        <div class="cred-value">50 646 948 281</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🌿</div>
+        <div class="cred-label">Certification</div>
+        <div class="cred-value">Eco Certified · Low VOC</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🛡️</div>
+        <div class="cred-label">Warranty</div>
+        <div class="cred-value">10 Year Product Warranty</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section style="padding:0">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">22/37 Mortimer Road, Acacia Ridge, QLD 4110</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value"><a href="tel:0411958958">0411 958 958</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:info@natureflooring.net.au">info@natureflooring.net.au</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Opening Hours</div>
+            <div class="contact-value">Mon–Fri: 9am–5pm<br>Saturday: 10am–4pm</div>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem">
+          <a href="get-a-quote.html" class="btn-primary">Get a Free Quote</a>
+        </div>
+      </div>
+      <div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps-api-ssl.google.com/maps?hl=en-US&ll=-27.578127,153.00914&output=embed&q=-27.578127,153.00914&z=17"
+            width="100%"
+            height="400"
+            style="border:0;display:block"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Nature Flooring location map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Visit our showroom</h2>
+    <p>Come and see our full range of SPC hybrid flooring in person at our Acacia Ridge warehouse — or we'll come to you for a free in-home consultation.</p>
+    <div class="cta-btns">
+      <a href="tel:0411958958" class="btn-primary" style="background:var(--green-accent);font-size:.95rem;padding:.9rem 2rem">Call 0411 958 958</a>
+      <a href="get-a-quote.html" class="btn-secondary" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.75);background:transparent">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text">Nature Flooring</div>
+      <div class="footer-logo-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd. QBCC: 15312707 · ABN: 50646948281</div>
+      <div class="footer-contact">
+        <div>📍 22/37 Mortimer Road, Acacia Ridge QLD 4110</div>
+        <div>📞 <a href="tel:0411958958">0411 958 958</a></div>
+        <div>✉️ <a href="mailto:info@natureflooring.net.au">info@natureflooring.net.au</a></div>
+        <div>🕐 Mon–Fri 9am–5pm · Sat 10am–4pm</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Products</div>
+      <ul class="footer-links">
+        <li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li>
+        <li><a href="products.html">All Products</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Free Consultation</a></li>
+        <li><a href="services.html">Residential Installation</a></li>
+        <li><a href="services.html">Commercial Projects</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="get-a-quote.html">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707</span>
+    <div class="footer-bottom-links">
+      <a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

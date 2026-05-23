@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPC Hybrid Flooring — Nature Flooring Brisbane</title>
+<meta name="description" content="Nature Flooring SPC Hybrid Flooring range. 10 exclusive colours, 100% waterproof, 6.5mm + 1.5mm underlay, click system. Brisbane's exclusive Nature Home distributor.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.product-hero{background:var(--off-white);border-bottom:1px solid var(--gray-200);padding:0}
+.product-hero-inner{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.product-hero-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);aspect-ratio:4/3;background:linear-gradient(135deg,#8B6B45,#A07850,#C4A070);position:relative}
+.product-hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.product-hero-img-overlay{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(0,0,0,.04) 80px,rgba(0,0,0,.04) 82px)}
+.tech-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0}
+.tech-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--green-light);color:var(--green);font-size:.75rem;font-weight:600;padding:.3rem .8rem;border-radius:20px}
+.tech-badge svg{width:13px;height:13px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:1.5rem 0}
+.spec-item{background:white;border:1px solid var(--gray-200);border-radius:6px;padding:.75rem 1rem}
+.spec-label{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.2rem}
+.spec-value{font-size:.88rem;font-weight:600;color:var(--text)}
+.colour-section{padding:4rem 0}
+.colour-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.colour-card{border-radius:8px;overflow:hidden;border:1px solid var(--gray-200);transition:all .25s;cursor:pointer}
+.colour-card:hover{border-color:var(--green);box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-3px)}
+.colour-swatch{aspect-ratio:3/2;position:relative}
+.colour-swatch img{width:100%;height:100%;object-fit:cover;display:block}
+.colour-swatch-placeholder{width:100%;height:100%}
+.colour-img-gallery{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.75rem}
+.colour-img-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}
+.colour-info{padding:1rem}
+.colour-sku{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:.2rem}
+.colour-name{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.colour-desc{font-size:.78rem;color:var(--gray-600);line-height:1.55}
+.features-box{background:var(--off-white);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:3rem 0}
+.features-box-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.features-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1.25rem}
+.features-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.88rem;color:var(--gray-600);line-height:1.55}
+.features-list li svg{width:18px;height:18px;color:var(--green);flex-shrink:0;margin-top:.1rem}
+.tech-specs{padding:4rem 0;background:white}
+.spec-table{background:white;border:1px solid var(--gray-200);border-radius:8px;overflow:hidden}
+.spec-table-title{background:var(--green);color:white;padding:1rem 1.5rem;font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700}
+.spec-row{display:grid;grid-template-columns:1fr 2fr;border-bottom:1px solid var(--gray-100)}
+.spec-row:last-child{border-bottom:none}
+.spec-label-cell{padding:.75rem 1.5rem;font-size:.83rem;font-weight:600;color:var(--gray-800);background:var(--off-white)}
+.spec-value-cell{padding:.75rem 1.5rem;font-size:.83rem;color:var(--gray-600)}
+/* Colour swatches */
+.sw-harvest{background:linear-gradient(135deg,#8B6B45,#A07850,#C4A070)}
+.sw-silver{background:linear-gradient(135deg,#9C9C94,#B8B8B0,#D0D0C8)}
+.sw-dawn{background:linear-gradient(135deg,#C8B89A,#D4C4A8,#E8DCC8)}
+.sw-amber{background:linear-gradient(135deg,#B88050,#C89060,#D8A878)}
+.sw-magnolia{background:linear-gradient(135deg,#C0A878,#D0BC90,#E0D0A8)}
+.sw-morandi{background:linear-gradient(135deg,#6B5040,#8B6B55,#A88070)}
+.sw-meteor{background:linear-gradient(135deg,#787870,#9C9C94,#B8B8B0)}
+.sw-golden{background:linear-gradient(135deg,#C89040,#D8A850,#E8C068)}
+.sw-midnight{background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28)}
+.sw-daybreak{background:linear-gradient(135deg,#D4C090,#E0D0A8,#EDE0C0)}
+@media(max-width:1024px){.product-hero-inner{grid-template-columns:1fr}.product-hero-img{display:none}.colour-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.colour-grid{grid-template-columns:repeat(2,1fr)}.spec-grid{grid-template-columns:1fr}.features-box-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>🌿 Australia's exclusive distributor for <strong>Nature Home (China) Co., Ltd.</strong></span>
+  <div class="topbar-divider"></div>
+  <span>📍 Acacia Ridge, Brisbane QLD</span>
+  <div class="topbar-divider"></div>
+  <span>📞 <strong>0411 958 958</strong></span>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="images/logo-icon.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" style="display:none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="nav-logo-text">Nature Flooring<span>Brisbane's exclusive eco flooring specialist</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="products.html" class="active">Products ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="products-spc-hybrid.html">SPC Hybrid Flooring</a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <div class="nav-dropdown">
+        <a href="about.html">About Us ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="get-a-quote.html">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:0411958958" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        0411 958 958
+      </a>
+      <a href="get-a-quote.html" class="btn-quote">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCT HERO -->
+<div class="product-hero">
+  <div class="product-hero-inner">
+    <div>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="products.html">Products</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>SPC Hybrid Flooring</span>
+      </div>
+      <h1 style="font-family:'Manrope',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:.75rem">SPC Hybrid Flooring</h1>
+      <p style="font-size:1rem;color:var(--gray-600);line-height:1.7;margin-bottom:1.5rem">One of the best quality SPC floors available in Australia. Hybrid flooring contains a limestone composite core board which makes it 100% waterproof and odour-proof. Noise-free, non-scratch and stain resistant — ideal for active families with kids and pets.</p>
+      <div class="tech-badges">
+        <span class="tech-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>100% Waterproof</span>
+        <span class="tech-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Noise-Free</span>
+        <span class="tech-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Non-Scratch</span>
+        <span class="tech-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Stain Resistant</span>
+        <span class="tech-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Click Lock System</span>
+        <span class="tech-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Underfloor Heating Compatible</span>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-item"><div class="spec-label">Plank Size</div><div class="spec-value">1500 × 226 × 8mm</div></div>
+        <div class="spec-item"><div class="spec-label">Thickness</div><div class="spec-value">6.5mm + 1.5mm underlay</div></div>
+        <div class="spec-item"><div class="spec-label">Box Coverage</div><div class="spec-value">2.034m² / 6 boards</div></div>
+        <div class="spec-item"><div class="spec-label">Slip Rating</div><div class="spec-value">P2</div></div>
+      </div>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+        <a href="get-a-quote.html" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:0411958958" class="btn-secondary">Call 0411 958 958</a>
+      </div>
+    </div>
+    <div class="product-hero-img">
+      <img src="images/Hybrid-Flooring-2024_page-0002.jpg" alt="SPC Hybrid Flooring - Nature Flooring Brisbane" style="width:100%;height:100%;object-fit:cover;display:block">
+      <div class="product-hero-img-overlay" style="position:absolute;inset:0"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES BOX -->
+<div class="features-box">
+  <div class="features-box-inner">
+    <div>
+      <h2 style="font-family:'Manrope',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:.5rem">Features of Hybrid Flooring</h2>
+      <p style="font-size:.9rem;color:var(--gray-600);line-height:1.65">Hybrid flooring is also resistant to extremes of heat and cold with minimal expansion or contraction. This means that even if your home has underfloor heating or constant temperature changes, your hybrid flooring will not buckle, lift or crack unlike other flooring products.</p>
+      <ul class="features-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Limestone composite core — 100% waterproof and odour-proof</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Noise-free, non-scratch, stain resistant — perfect for families</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Resistant to temperature extremes — won't buckle, lift or crack</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Compatible with underfloor heating systems</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Click-lock floating installation — can go over existing floors</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>4-Sided micro bevel for authentic plank appearance</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>UV coating for long-lasting surface protection</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Acoustic Rating AAAC 6 Star</li>
+      </ul>
+    </div>
+    <div>
+      <div style="background:var(--green);border-radius:8px;padding:2rem;color:white">
+        <h3 style="font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:1rem">Technical Information</h3>
+        <div style="display:flex;flex-direction:column;gap:.6rem;font-size:.83rem">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.6rem"><span style="opacity:.75">Acoustic Rating</span><span style="font-weight:600">AAAC 6 Star L'n Tw: 41 FIIC:69</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.6rem"><span style="opacity:.75">Fire Resistance</span><span style="font-weight:600">Smoke: 53% min · CHF &gt;11.0kW/m²</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.6rem"><span style="opacity:.75">Slip Rating</span><span style="font-weight:600">P2</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.6rem"><span style="opacity:.75">Wear Layer</span><span style="font-weight:600">0.5mm</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.6rem"><span style="opacity:.75">Profile</span><span style="font-weight:600">4-Sided Micro Bevel</span></div>
+          <div style="display:flex;justify-content:space-between"><span style="opacity:.75">Surface</span><span style="font-weight:600">UV Coating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COLOUR RANGE -->
+<section class="colour-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2>Colour Range — 10 Exclusive Designs</h2>
+        <p>Each colour is available exclusively through Nature Flooring Australia</p>
+      </div>
+    </div>
+    <div class="colour-grid">
+
+      <div class="colour-card" id="hyb8001">
+        <div class="colour-swatch">
+          <img src="images/8001/HYB-8001.jpg" alt="HYB-8001 Harvest SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8001</div>
+          <div class="colour-name">Harvest</div>
+          <div class="colour-desc">A warm, golden oak tone that brings an inviting and natural atmosphere to any space. Harvest offers timeless grain patterns that add both comfort and modern elegance, making it ideal for living rooms and family homes.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8002">
+        <div class="colour-swatch">
+          <img src="images/8002/HYB-8002.jpg" alt="HYB-8002 Silver Rose SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8002</div>
+          <div class="colour-name">Silver Rose</div>
+          <div class="colour-desc">A soft grey-beige blend with subtle wood textures, perfect for contemporary interiors. Silver Rose creates a calm and balanced setting, enhancing brightness while maintaining a natural timber feel.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8003">
+        <div class="colour-swatch">
+          <img src="images/8003/HYB-8003.jpg" alt="HYB-8003 Dawn SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8003</div>
+          <div class="colour-name">Dawn</div>
+          <div class="colour-desc">A pale, airy wood colour inspired by early morning light. Dawn opens up the room visually, making it perfect for minimalist, Scandinavian or modern home styles seeking freshness and simplicity.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8004">
+        <div class="colour-swatch">
+          <img src="images/8004/HYB-8004.jpg" alt="HYB-8004 Amber Valley SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8004</div>
+          <div class="colour-name">Amber Valley</div>
+          <div class="colour-desc">A gentle warm-oak shade with fine grain definition. Amber Valley adds a cozy, welcoming character while still keeping a refined and stylish appearance — great for bedrooms, lounges, and family areas.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8005">
+        <div class="colour-swatch">
+          <img src="images/8005/HYB-8005.jpg" alt="HYB-8005 Light Magnolia SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8005</div>
+          <div class="colour-name">Light Magnolia</div>
+          <div class="colour-desc">A neutral natural-oak tone that suits almost any design theme. Light Magnolia creates a harmonious balance between warmth and brightness, making spaces feel both comfortable and spacious.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8006">
+        <div class="colour-swatch">
+          <img src="images/8006/HYB-8006.jpg" alt="HYB-8006 Morandi Spray SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8006</div>
+          <div class="colour-name">Morandi Spray</div>
+          <div class="colour-desc">A deeper, muted brown derived from the Morandi colour palette. This tone gives interiors a sense of sophistication, stability, and modern texture — ideal for spaces needing depth and character.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8007">
+        <div class="colour-swatch">
+          <img src="images/8007/HYB-8007.jpg" alt="HYB-8007 Meteor Gray SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8007</div>
+          <div class="colour-name">Meteor Gray</div>
+          <div class="colour-desc">A stylish light-grey wood colour with cool undertones. Meteor Gray enhances modern and industrial aesthetics, delivering a clean, elegant look that pairs well with white, black, and metal accents.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8008">
+        <div class="colour-swatch">
+          <img src="images/8008/HYB-8008.jpg" alt="HYB-8008 Golden Island SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8008</div>
+          <div class="colour-name">Golden Island</div>
+          <div class="colour-desc">A rich golden timber shade with strong visual presence. Golden Island brightens the room instantly, offering a luxurious and vibrant wood look — perfect for open-plan areas and high-impact designs.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8009">
+        <div class="colour-swatch sw-midnight" style="background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28);display:flex;align-items:center;justify-content:center;aspect-ratio:3/2"><span style="color:rgba(255,255,255,.5);font-size:.75rem">Image coming soon</span></div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8009</div>
+          <div class="colour-name">Middle Night</div>
+          <div class="colour-desc">A dark espresso-brown wood colour that brings drama, contrast, and elegance. Middle Night is ideal for premium interiors, creating a bold high-end atmosphere while grounding the room visually.</div>
+        </div>
+      </div>
+
+      <div class="colour-card" id="hyb8010">
+        <div class="colour-swatch">
+          <img src="images/8010/HYB-8010.jpg" alt="HYB-8010 Day Break SPC Hybrid Flooring" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="colour-info">
+          <div class="colour-sku">HYB-8010</div>
+          <div class="colour-name">Day Break</div>
+          <div class="colour-desc">A soft sandy-beige wood tone reminiscent of early sunshine. Day Break feels gentle and naturally bright, perfect for creating a warm, comfortable, and stylish home environment.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<div class="areas">
+  <div class="areas-inner">
+    <div class="areas-text">
+      <h2>📍 Serving South East Queensland</h2>
+      <p>Free delivery and installation available across Brisbane and surrounds</p>
+    </div>
+    <div class="areas-chips">
+      <span class="area-chip">Brisbane CBD</span><span class="area-chip">Acacia Ridge</span>
+      <span class="area-chip">Sunnybank</span><span class="area-chip">Logan</span>
+      <span class="area-chip">Ipswich</span><span class="area-chip">Gold Coast</span>
+      <span class="area-chip">Redlands</span><span class="area-chip">Moreton Bay</span>
+      <span class="area-chip">Sunshine Coast</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Ready to order or see samples?</h2>
+    <p>Call us or book a free in-home consultation — we'll bring colour samples to your space so you can see exactly how each one looks in your home's light.</p>
+    <div class="cta-btns">
+      <a href="tel:0411958958" class="btn-primary" style="background:var(--green-accent);font-size:.95rem;padding:.9rem 2rem">Call 0411 958 958</a>
+      <a href="get-a-quote.html" class="btn-secondary" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.75);background:transparent">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text">Nature Flooring</div>
+      <div class="footer-logo-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd. QBCC: 15312707 · ABN: 50646948281</div>
+      <div class="footer-contact">
+        <div>📍 22/37 Mortimer Road, Acacia Ridge QLD 4110</div>
+        <div>📞 <a href="tel:0411958958">0411 958 958</a></div>
+        <div>✉️ <a href="mailto:info@natureflooring.net.au">info@natureflooring.net.au</a></div>
+        <div>🕐 Mon–Fri 9am–5pm · Sat 10am–4pm</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Products</div>
+      <ul class="footer-links">
+        <li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li>
+        <li><a href="products.html">All Products</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Free Consultation</a></li>
+        <li><a href="services.html">Supply &amp; Installation</a></li>
+        <li><a href="services.html">Commercial Projects</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="get-a-quote.html">Get a Quote</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707</span>
+    <div class="footer-bottom-links">
+      <a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.08});
+document.querySelectorAll('.colour-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease, transform .5s ease';observer.observe(el);});
+</script>
+</body>
+</html>

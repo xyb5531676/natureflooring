@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Flooring — Premium SPC Hybrid & Timber Flooring Brisbane</title>
+<meta name="description" content="Australia's exclusive distributor for Nature Home China. Premium SPC hybrid flooring, engineered timber and commercial flooring. Expert installation across South East Queensland.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#1B5E3B;
+  --green-mid:#2E7D52;
+  --green-light:#E8F5EE;
+  --green-accent:#4CAF7A;
+  --orange:#E8621A;
+  --orange-light:#FFF3EC;
+  --white:#FFFFFF;
+  --off-white:#F8F8F6;
+  --gray-100:#F2F2F0;
+  --gray-200:#E5E5E2;
+  --gray-400:#ADADAA;
+  --gray-600:#6B6B68;
+  --gray-800:#2A2A28;
+  --text:#1A1A18;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+/* TOP BAR */
+.topbar{background:var(--green);color:white;text-align:center;padding:.5rem 1rem;font-size:.75rem;letter-spacing:.03em;display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap}
+.topbar strong{font-weight:600}
+.topbar-divider{width:1px;height:12px;background:rgba(255,255,255,.3)}
+
+/* NAV */
+nav{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:0;height:68px}
+.nav-logo{display:flex;align-items:center;gap:.6rem;margin-right:2rem;flex-shrink:0}
+.nav-logo-mark{width:38px;height:38px;background:var(--green);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.nav-logo-mark img{width:28px;height:28px;object-fit:contain;filter:brightness(0) invert(1)}
+.nav-logo-mark svg{width:22px;height:22px}
+.nav-logo-text{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--green);line-height:1.1}
+.nav-logo-text span{display:block;font-weight:400;font-size:.65rem;color:var(--gray-600);letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;align-items:stretch;flex:1;height:100%}
+.nav-links a{display:flex;align-items:center;padding:0 1.1rem;font-size:.85rem;font-weight:500;color:var(--gray-800);white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s;gap:.3rem;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--green);border-bottom-color:var(--green)}
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{position:absolute;top:100%;left:0;background:white;border:1px solid var(--gray-200);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.1);min-width:200px;padding:.5rem 0;display:none;z-index:200}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu a{display:block;padding:.6rem 1.25rem;font-size:.83rem;color:var(--gray-800);border-bottom:none !important;white-space:nowrap}
+.nav-dropdown-menu a:hover{background:var(--green-light);color:var(--green)}
+.nav-actions{display:flex;align-items:center;gap:.75rem;margin-left:auto;flex-shrink:0}
+.nav-phone{display:flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;color:var(--green);padding:.5rem .9rem;border:2px solid var(--green);border-radius:4px;transition:all .2s}
+.nav-phone:hover{background:var(--green);color:white}
+.nav-phone svg{width:15px;height:15px}
+.btn-quote{background:var(--orange);color:white;padding:.55rem 1.3rem;border-radius:4px;font-size:.85rem;font-weight:600;transition:background .2s}
+.btn-quote:hover{background:#d0551a}
+
+/* HERO */
+.hero{background:var(--off-white);overflow:hidden}
+.hero-inner{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green);font-size:.75rem;font-weight:600;padding:.35rem .85rem;border-radius:20px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1.25rem}
+.hero-eyebrow svg{width:14px;height:14px}
+.hero-title{font-family:'Manrope',sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:800;line-height:1.15;color:var(--text);margin-bottom:1rem}
+.hero-title em{font-style:normal;color:var(--green)}
+.hero-subtitle{font-size:1rem;color:var(--gray-600);line-height:1.7;margin-bottom:2rem;max-width:480px}
+.hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-primary{background:var(--green);color:white;padding:.8rem 1.8rem;border-radius:4px;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:.5rem;transition:background .2s}
+.btn-primary:hover{background:var(--green-mid)}
+.btn-primary svg{width:16px;height:16px}
+.btn-secondary{background:white;color:var(--green);padding:.8rem 1.8rem;border-radius:4px;font-size:.9rem;font-weight:600;border:2px solid var(--green);display:inline-flex;align-items:center;gap:.5rem;transition:all .2s}
+.btn-secondary:hover{background:var(--green-light)}
+.hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--gray-600)}
+.trust-item svg{width:16px;height:16px;color:var(--green);flex-shrink:0}
+.hero-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
+.hero-img-placeholder{background:linear-gradient(135deg,#8B6B45 0%,#A07850 40%,#C4A070 70%,#D4B88A 100%);aspect-ratio:4/3;position:relative;display:flex;align-items:flex-end;padding:1rem}
+.hero-img-placeholder::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(0,0,0,.04) 80px,rgba(0,0,0,.04) 82px),repeating-linear-gradient(0deg,transparent,transparent 200px,rgba(0,0,0,.03) 200px,rgba(0,0,0,.03) 202px)}
+.hero-img-badge{background:white;border-radius:6px;padding:.65rem 1rem;display:flex;align-items:center;gap:.6rem;box-shadow:0 4px 16px rgba(0,0,0,.15);position:relative;z-index:1}
+.hero-img-badge-icon{width:32px;height:32px;background:var(--green-light);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.hero-img-badge-icon svg{width:18px;height:18px;color:var(--green)}
+.hero-img-badge-text{font-size:.72rem;color:var(--gray-600);line-height:1.3}
+.hero-img-badge-text strong{display:block;font-size:.85rem;color:var(--text);font-weight:600}
+
+/* CATEGORY BAR */
+.cats{background:white;border-bottom:1px solid var(--gray-200)}
+.cats-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;gap:0;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.cats-inner::-webkit-scrollbar{display:none}
+.cat-btn{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1.25rem 1.75rem;border-bottom:3px solid transparent;cursor:pointer;transition:all .2s;flex-shrink:0;font-size:.78rem;font-weight:500;color:var(--gray-600);white-space:nowrap;text-decoration:none}
+.cat-btn:hover,.cat-btn.active{color:var(--green);border-bottom-color:var(--green)}
+.cat-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;background:var(--gray-100);transition:background .2s}
+.cat-btn:hover .cat-icon,.cat-btn.active .cat-icon{background:var(--green-light)}
+
+/* PROMO BANNER */
+.promo{background:linear-gradient(135deg,var(--green) 0%,#2A7A52 100%);padding:1.5rem 2rem}
+.promo-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.promo-text{color:white}
+.promo-text h3{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:.2rem}
+.promo-text p{font-size:.85rem;opacity:.85}
+.promo-btn{background:white;color:var(--green);padding:.65rem 1.5rem;border-radius:4px;font-size:.85rem;font-weight:700;flex-shrink:0;transition:all .2s}
+.promo-btn:hover{background:var(--green-light)}
+
+/* SECTION COMMON */
+section{padding:4rem 0}
+.section-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;gap:1rem;flex-wrap:wrap}
+.section-header-left h2{font-family:'Manrope',sans-serif;font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:.3rem}
+.section-header-left p{font-size:.9rem;color:var(--gray-600)}
+.view-all{font-size:.85rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.3rem;white-space:nowrap}
+.view-all svg{width:14px;height:14px;transition:transform .2s}
+.view-all:hover svg{transform:translateX(3px)}
+
+/* PRODUCT GRID */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.product-card{background:white;border:1px solid var(--gray-200);border-radius:8px;overflow:hidden;transition:all .25s;cursor:pointer;text-decoration:none;color:inherit;display:block}
+.product-card:hover{border-color:var(--green);box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-3px)}
+.product-img{aspect-ratio:4/3;position:relative;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.product-card:hover .product-img img{transform:scale(1.05)}
+.product-img-bg{width:100%;height:100%;transition:transform .4s}
+.product-card:hover .product-img-bg{transform:scale(1.05)}
+.product-img.spc .product-img-bg{background:linear-gradient(135deg,#7B5B3A,#A07850,#C4A070)}
+.product-img.silver .product-img-bg{background:linear-gradient(135deg,#9C9C94,#B8B8B0,#D0D0C8)}
+.product-img.dawn .product-img-bg{background:linear-gradient(135deg,#C8B89A,#D4C4A8,#E8DCC8)}
+.product-img.dark .product-img-bg{background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28)}
+.product-img.grey .product-img-bg{background:linear-gradient(135deg,#787870,#9C9C94,#B8B8B0)}
+.product-img-inner{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(0,0,0,.04) 60px,rgba(0,0,0,.04) 62px),repeating-linear-gradient(0deg,transparent,transparent 120px,rgba(255,255,255,.03) 120px,rgba(255,255,255,.03) 122px)}
+.product-badge{position:absolute;top:.65rem;left:.65rem;background:var(--orange);color:white;font-size:.65rem;font-weight:700;padding:.25rem .65rem;border-radius:3px;letter-spacing:.03em}
+.product-badge.green{background:var(--green)}
+.product-info{padding:1rem}
+.product-name{font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.product-range{font-size:.78rem;color:var(--gray-600);margin-bottom:.65rem}
+.product-meta{display:flex;align-items:center;justify-content:space-between}
+.product-price{font-size:.85rem;color:var(--gray-600)}
+.product-price strong{font-size:1rem;color:var(--text);font-weight:700}
+.product-cta{font-size:.75rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.2rem}
+.product-cta svg{width:12px;height:12px}
+
+/* FEATURES STRIP */
+.features{background:var(--off-white);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:2.5rem 0}
+.features-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.feature-item{display:flex;align-items:flex-start;gap:1rem}
+.feature-icon{width:44px;height:44px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feature-icon svg{width:22px;height:22px;color:var(--green)}
+.feature-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.25rem}
+.feature-text{font-size:.8rem;color:var(--gray-600);line-height:1.5}
+
+/* BANNER CARDS */
+.banners{background:white}
+.banner-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1.5rem}
+.banner-card{border-radius:8px;overflow:hidden;position:relative;cursor:pointer}
+.banner-bg{padding:2.5rem;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.banner-bg-1{background:linear-gradient(135deg,#1B3A2A 0%,#2E5C40 60%,#3D7A52 100%)}
+.banner-bg-2{background:linear-gradient(135deg,#3D2B1F 0%,#6B4C38 60%,#8B6B50 100%)}
+.banner-bg-3{background:linear-gradient(135deg,#1A2B3D 0%,#2B4A6B 60%,#3D6B8B 100%)}
+.banner-pattern{position:absolute;inset:0;opacity:.08;background-image:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.5) 30px,rgba(255,255,255,.5) 32px)}
+.banner-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:.5rem}
+.banner-title{font-family:'Manrope',sans-serif;font-size:1.3rem;font-weight:800;color:white;line-height:1.2;margin-bottom:.5rem}
+.banner-card:first-child .banner-title{font-size:1.7rem}
+.banner-sub{font-size:.8rem;color:rgba(255,255,255,.7);margin-bottom:1.25rem;line-height:1.5}
+.banner-link{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:white;padding:.55rem 1.1rem;border-radius:4px;font-size:.8rem;font-weight:600;border:1px solid rgba(255,255,255,.25);transition:all .2s;text-decoration:none}
+.banner-card:hover .banner-link{background:white;color:var(--green)}
+.banner-link svg{width:14px;height:14px}
+
+/* SERVICES SECTION */
+.services{background:var(--off-white)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:white;border:1px solid var(--gray-200);border-radius:8px;padding:2rem;transition:all .25s}
+.service-card:hover{border-color:var(--green);box-shadow:0 4px 20px rgba(27,94,59,.1)}
+.service-card-icon{width:48px;height:48px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.service-card-icon svg{width:24px;height:24px;color:var(--green)}
+.service-card h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.5rem}
+.service-card p{font-size:.85rem;color:var(--gray-600);line-height:1.65;margin-bottom:1.25rem}
+.service-link{font-size:.82rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.3rem;text-decoration:none}
+.service-link svg{width:13px;height:13px;transition:transform .2s}
+.service-card:hover .service-link svg{transform:translateX(3px)}
+
+/* REVIEWS */
+.reviews{background:white}
+.reviews-top{display:flex;align-items:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap}
+.rating-big{display:flex;align-items:center;gap:1rem}
+.rating-score{font-family:'Manrope',sans-serif;font-size:3rem;font-weight:800;color:var(--text);line-height:1}
+.rating-stars{color:#F5A623;font-size:1.3rem;line-height:1}
+.rating-count{font-size:.8rem;color:var(--gray-600);margin-top:.2rem}
+.rating-divider{width:1px;height:50px;background:var(--gray-200)}
+.google-badge{display:flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:var(--gray-800)}
+.google-badge svg{width:20px;height:20px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.review-card{background:var(--off-white);border:1px solid var(--gray-200);border-radius:8px;padding:1.5rem}
+.review-stars{color:#F5A623;font-size:.9rem;margin-bottom:.75rem}
+.review-text{font-size:.88rem;color:var(--gray-800);line-height:1.65;margin-bottom:1rem;font-style:italic}
+.review-author{display:flex;align-items:center;gap:.6rem}
+.review-avatar{width:32px;height:32px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:white;flex-shrink:0}
+.review-name{font-size:.8rem;font-weight:600;color:var(--text)}
+.review-suburb{font-size:.72rem;color:var(--gray-600)}
+
+/* AREAS */
+.areas{background:var(--green);padding:3rem 0}
+.areas-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.areas-text h2{font-family:'Manrope',sans-serif;font-size:1.4rem;font-weight:800;color:white;margin-bottom:.3rem}
+.areas-text p{font-size:.88rem;color:rgba(255,255,255,.75)}
+.areas-chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.area-chip{background:rgba(255,255,255,.15);color:white;padding:.4rem 1rem;border-radius:20px;font-size:.78rem;font-weight:500;border:1px solid rgba(255,255,255,.25);transition:all .2s}
+.area-chip:hover{background:rgba(255,255,255,.25)}
+
+/* CTA SECTION */
+.cta-section{background:var(--gray-800);padding:5rem 0}
+.cta-inner{max-width:700px;margin:0 auto;padding:0 2rem;text-align:center}
+.cta-inner h2{font-family:'Manrope',sans-serif;font-size:2rem;font-weight:800;color:white;margin-bottom:.75rem}
+.cta-inner p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:2.5rem}
+.cta-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
+.cta-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:1.5rem;text-align:left}
+.cta-card svg{width:28px;height:28px;color:var(--green-accent);margin-bottom:.75rem}
+.cta-card h4{font-size:.95rem;font-weight:600;color:white;margin-bottom:.3rem}
+.cta-card p{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.5}
+.cta-card .cta-value{font-size:1.1rem;font-weight:700;color:white;margin-top:.4rem}
+.cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:#111110;color:rgba(255,255,255,.5)}
+.footer-top{max-width:1280px;margin:0 auto;padding:3.5rem 2rem;display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem}
+.footer-logo-text{font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:700;color:white;margin-bottom:.5rem}
+.footer-logo-sub{font-size:.75rem;margin-bottom:1.25rem;line-height:1.6}
+.footer-contact{font-size:.85rem;line-height:1.8}
+.footer-contact a{color:rgba(255,255,255,.7);transition:color .2s}
+.footer-contact a:hover{color:white}
+.footer-heading{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.footer-links a{font-size:.83rem;transition:color .2s}
+.footer-links a:hover{color:white}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);max-width:1280px;margin:0 auto;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.75rem}
+.footer-bottom-links{display:flex;gap:1.5rem}
+
+@media(max-width:1024px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .banner-grid{grid-template-columns:1fr 1fr}
+  .banner-grid .banner-card:first-child{grid-column:span 2}
+  footer .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-img{display:none}
+  .nav-links{display:none}
+  .features-inner{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .areas-inner{flex-direction:column;align-items:flex-start}
+  .cta-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>🌿 Australia's exclusive distributor for <strong>Nature Home (China) Co., Ltd.</strong></span>
+  <div class="topbar-divider"></div>
+  <span>📍 Acacia Ridge, Brisbane QLD</span>
+  <div class="topbar-divider"></div>
+  <span>📞 <strong>0411 958 958</strong> — Free in-home quotes</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="images/logo-icon.png" alt="Nature Flooring" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" style="display:none">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        Nature Flooring
+        <span>Brisbane's exclusive eco flooring specialist</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <div class="nav-dropdown">
+        <a href="products.html">Products ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="products-spc-hybrid.html">SPC Hybrid Flooring</a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <div class="nav-dropdown">
+        <a href="about.html">About Us ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="get-a-quote.html">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:0411958958" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        0411 958 958
+      </a>
+      <a href="get-a-quote.html" class="btn-quote">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Eco-Certified · 10 Year Warranty
+      </div>
+      <h1 class="hero-title">The real beauty begins with <em>Nature</em></h1>
+      <p class="hero-subtitle">As Australia's exclusive distributor for Nature Home China, we supply SPC hybrid, engineered timber and commercial flooring — with expert installation across South East Queensland. Go Green for Good.</p>
+      <div class="hero-ctas">
+        <a href="get-a-quote.html" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book Free Consultation
+        </a>
+        <a href="products.html" class="btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/></svg>
+          Browse Products
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Formaldehyde-free, low VOC
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Free in-home measure &amp; quote
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Fully insured installation team
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          QBCC Licensed · ABN 50646948281
+        </div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="hero-img-placeholder" style="position:relative">
+        <img src="images/Hybrid-Flooring-2024_page-0003.jpg" alt="Nature SPC Hybrid Flooring - Brisbane" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div class="hero-img-badge" style="position:absolute;bottom:1rem;left:1rem;z-index:1">
+          <div class="hero-img-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="hero-img-badge-text">
+            <strong>Eco Certified</strong>
+            International health standard
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORY BAR -->
+<div class="cats">
+  <div class="cats-inner">
+    <a href="products.html" class="cat-btn active">
+      <div class="cat-icon">🏠</div>
+      All Flooring
+    </a>
+    <a href="products-spc-hybrid.html" class="cat-btn">
+      <div class="cat-icon">💧</div>
+      SPC Hybrid
+    </a>
+    <a href="products.html" class="cat-btn">
+      <div class="cat-icon">🌳</div>
+      Engineered Timber
+    </a>
+    <a href="services.html" class="cat-btn">
+      <div class="cat-icon">🏢</div>
+      Commercial
+    </a>
+    <a href="services.html" class="cat-btn">
+      <div class="cat-icon">🔧</div>
+      Installation
+    </a>
+  </div>
+</div>
+
+<!-- PROMO BANNER -->
+<div class="promo">
+  <div class="promo-inner">
+    <div class="promo-text">
+      <h3>⭐ Special Offer — Free installation on orders over 60m²</h3>
+      <p>Book your free in-home quote today to lock in the deal. T&amp;Cs apply.</p>
+    </div>
+    <a href="get-a-quote.html" class="promo-btn">Claim Offer →</a>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2>Featured Products</h2>
+        <p>Australia-exclusive range from Nature Home — eco-certified, durable, beautifully designed</p>
+      </div>
+      <a href="products.html" class="view-all">
+        View all products
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="product-grid">
+      <a href="products-spc-hybrid.html" class="product-card">
+        <div class="product-img" style="position:relative">
+          <img src="images/8001/HYB-8001.jpg" alt="HYB-8001 Harvest SPC Hybrid Flooring" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s">
+          <div class="product-badge green">Bestseller</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">HYB-8001 — Harvest</div>
+          <div class="product-range">SPC Hybrid Flooring · 6.5mm · Waterproof</div>
+          <div class="product-meta">
+            <div class="product-price">SPC <strong>Hybrid</strong></div>
+            <div class="product-cta">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </div>
+      </a>
+      <a href="products-spc-hybrid.html" class="product-card">
+        <div class="product-img" style="position:relative">
+          <img src="images/8002/HYB-8002.jpg" alt="HYB-8002 Silver Rose SPC Hybrid Flooring" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s">
+          <div class="product-badge">New Colour</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">HYB-8002 — Silver Rose</div>
+          <div class="product-range">SPC Hybrid Flooring · 6.5mm · Waterproof</div>
+          <div class="product-meta">
+            <div class="product-price">SPC <strong>Hybrid</strong></div>
+            <div class="product-cta">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </div>
+      </a>
+      <a href="products-spc-hybrid.html" class="product-card">
+        <div class="product-img" style="position:relative">
+          <img src="images/8007/HYB-8007.jpg" alt="HYB-8007 Meteor Gray SPC Hybrid Flooring" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s">
+          <div class="product-badge">Popular</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">HYB-8007 — Meteor Gray</div>
+          <div class="product-range">SPC Hybrid Flooring · 6.5mm · Waterproof</div>
+          <div class="product-meta">
+            <div class="product-price">SPC <strong>Hybrid</strong></div>
+            <div class="product-cta">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </div>
+      </a>
+      <a href="products-spc-hybrid.html" class="product-card">
+        <div class="product-img" style="position:relative;background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28)">
+          <div class="product-badge green">Premium</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">HYB-8009 — Middle Night</div>
+          <div class="product-range">SPC Hybrid Flooring · 6.5mm · Waterproof</div>
+          <div class="product-meta">
+            <div class="product-price">SPC <strong>Hybrid</strong></div>
+            <div class="product-cta">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features">
+  <div class="features-inner">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div>
+        <div class="feature-title">Free In-Home Quote</div>
+        <div class="feature-text">We come to you, measure up, and provide a fixed price with no surprises.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <div class="feature-title">10-Year Warranty</div>
+        <div class="feature-text">Full product and installation warranty — backed by Nature Home's global standards.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 8"/></svg>
+      </div>
+      <div>
+        <div class="feature-title">Eco Certified Range</div>
+        <div class="feature-text">Formaldehyde-free, low VOC products — safe for children, pets, and the planet.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div>
+        <div class="feature-title">Expert Installers</div>
+        <div class="feature-text">Our insured, trained teams deliver clean finishes on time — residential or commercial.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BANNERS -->
+<section class="banners">
+  <div class="section-inner">
+    <div class="banner-grid">
+      <div class="banner-card">
+        <div class="banner-bg banner-bg-1">
+          <div class="banner-pattern"></div>
+          <div class="banner-label">Exclusive Distributor</div>
+          <div class="banner-title">Nature Home China — only available through us in Australia</div>
+          <div class="banner-sub">28 years of flooring heritage. Eco-certified. Available exclusively through Nature Flooring Brisbane.</div>
+          <a href="about.html" class="banner-link">Learn about our range <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="banner-card">
+        <div class="banner-bg banner-bg-2" style="min-height:220px">
+          <div class="banner-pattern"></div>
+          <div class="banner-label">SPC Hybrid</div>
+          <div class="banner-title">Waterproof floors. Pet-friendly. Click-lock.</div>
+          <a href="products-spc-hybrid.html" class="banner-link">Shop SPC <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="banner-card">
+        <div class="banner-bg banner-bg-3" style="min-height:220px">
+          <div class="banner-pattern"></div>
+          <div class="banner-label">Commercial Projects</div>
+          <div class="banner-title">Offices, retail, hospitality — we do it all.</div>
+          <a href="services.html" class="banner-link">Get a project quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2>Our Services</h2>
+        <p>From consultation to completion — we handle every step</p>
+      </div>
+      <a href="services.html" class="view-all">All services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Free In-Home Consultation</h3>
+        <p>One of our flooring specialists visits your space, takes precise measurements, and provides a detailed fixed quote — no pressure, no obligation.</p>
+        <a href="get-a-quote.html" class="service-link">Book your free quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3>Supply &amp; Professional Installation</h3>
+        <p>Our experienced installation teams handle subfloor preparation, underlay, and full click-lock installation with minimal disruption to your home.</p>
+        <a href="services.html" class="service-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h3>Commercial Flooring Projects</h3>
+        <p>From office fit-outs to retail renovations — we manage large-scale projects with dedicated coordination, commercial-grade products, and competitive bulk pricing.</p>
+        <a href="get-a-quote.html" class="service-link">Request a project quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-header-left">
+        <h2>Customer Reviews</h2>
+        <p>Trusted by homeowners and businesses across South East Queensland</p>
+      </div>
+    </div>
+    <div class="reviews-top">
+      <div class="rating-big">
+        <div class="rating-score">4.9</div>
+        <div>
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-count">Based on Google reviews</div>
+        </div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="google-badge">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Verified Google Reviews
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Absolutely transformed our home. The SPC flooring looks incredible and feels so solid underfoot. The team was professional, clean, and had everything done in a day."</p>
+        <div class="review-author">
+          <div class="review-avatar">SM</div>
+          <div>
+            <div class="review-name">Sarah M.</div>
+            <div class="review-suburb">Sunnybank Hills, QLD</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Used Nature Flooring for our café fit-out. Great product selection, competitive pricing, and the installation crew were meticulous. Cannot recommend them enough."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--orange)">JT</div>
+          <div>
+            <div class="review-name">James T.</div>
+            <div class="review-suburb">West End, Brisbane</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Came out to measure and quote within 24 hours. Honest advice, no pressure whatsoever, and the floors look absolutely stunning. Would use them again in a heartbeat."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#1A6B8A">LK</div>
+          <div>
+            <div class="review-name">Linda K.</div>
+            <div class="review-suburb">Carindale, QLD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<div class="areas">
+  <div class="areas-inner">
+    <div class="areas-text">
+      <h2>📍 We Service All of South East Queensland</h2>
+      <p>Free delivery and professional installation available across Brisbane and surrounds</p>
+    </div>
+    <div class="areas-chips">
+      <span class="area-chip">Brisbane CBD</span>
+      <span class="area-chip">Acacia Ridge</span>
+      <span class="area-chip">Sunnybank</span>
+      <span class="area-chip">Logan</span>
+      <span class="area-chip">Ipswich</span>
+      <span class="area-chip">Gold Coast</span>
+      <span class="area-chip">Redlands</span>
+      <span class="area-chip">Moreton Bay</span>
+      <span class="area-chip">Sunshine Coast</span>
+      <span class="area-chip">Toowoomba</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <h2>Ready to transform your floors?</h2>
+    <p>Book a free, no-obligation in-home consultation. We'll measure up, recommend the best products for your space, and give you a clear fixed-price quote.</p>
+    <div class="cta-cards">
+      <div class="cta-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <h4>Call Us Direct</h4>
+        <p>Speak to a flooring specialist today</p>
+        <div class="cta-value">0411 958 958</div>
+      </div>
+      <div class="cta-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <h4>Showroom &amp; Warehouse</h4>
+        <p>Come see our full range in person</p>
+        <div class="cta-value">22/37 Mortimer Rd, Acacia Ridge</div>
+      </div>
+    </div>
+    <div class="cta-btns">
+      <a href="tel:0411958958" class="btn-primary" style="background:var(--green-accent);font-size:.95rem;padding:.9rem 2rem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call 0411 958 958
+      </a>
+      <a href="mailto:info@natureflooring.net.au" class="btn-secondary" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.75);background:transparent">
+        Email Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-text">Nature Flooring</div>
+      <div class="footer-logo-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd. Premium eco-certified flooring for residential and commercial spaces across Queensland. QBCC: 15312707 · ABN: 50646948281</div>
+      <div class="footer-contact">
+        <div>📍 22/37 Mortimer Road, Acacia Ridge QLD 4110</div>
+        <div>📞 <a href="tel:0411958958">0411 958 958</a></div>
+        <div>✉️ <a href="mailto:info@natureflooring.net.au">info@natureflooring.net.au</a></div>
+        <div>🕐 Mon–Fri 9am–5pm · Sat 10am–4pm</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Products</div>
+      <ul class="footer-links">
+        <li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li>
+        <li><a href="products.html">All Products</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Free Consultation</a></li>
+        <li><a href="services.html">Supply &amp; Installation</a></li>
+        <li><a href="services.html">Commercial Projects</a></li>
+        <li><a href="services.html">Residential Installation</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Nature Flooring</a></li>
+        <li><a href="products.html">Products Gallery</a></li>
+        <li><a href="get-a-quote.html">Contact &amp; Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707 · All rights reserved</span>
+    <div class="footer-bottom-links">
+      <a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a>
+      <a href="#" style="color:rgba(255,255,255,.3)">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}
+  });
+},{threshold:.08});
+document.querySelectorAll('.product-card,.service-card,.review-card,.banner-card,.feature-item').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
