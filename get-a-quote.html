@@ -28,8 +28,8 @@ img{max-width:100%;display:block}
 nav{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:68px}
 .nav-logo{display:flex;align-items:center;gap:.75rem;margin-right:2.5rem;flex-shrink:0;text-decoration:none}
-.nav-logo-mark{display:flex;align-items:center;flex-shrink:0}
-.nav-logo-mark img{height:42px;width:auto;display:block}
+.nav-logo-mark{display:block;flex-shrink:0}
+.nav-logo-mark img{height:40px;width:auto;display:block;max-width:none}
 .nav-logo-mark svg{display:none}
 .nav-logo-text{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--green);line-height:1.15}
 .nav-logo-text span{display:block;font-weight:400;font-size:.62rem;color:var(--gray-600);letter-spacing:.04em;text-transform:uppercase}
@@ -128,7 +128,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(27,94,59,.08)}
 .fg input::placeholder,.fg textarea::placeholder{color:var(--gray-400)}
 .fg textarea{height:110px;resize:vertical;line-height:1.6}
-.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236B6B68' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
 .fg-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-submit{background:var(--orange);color:white;border:none;padding:.9rem 2rem;border-radius:6px;font-size:.95rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;width:100%;transition:background .2s,transform .1s;display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.5rem}
 .form-submit:hover{background:#d0551a}
@@ -233,88 +232,22 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <p>Fill in your details and we'll contact you within 24 hours to arrange a consultation.</p>
         </div>
         <div class="qfb-body">
-          <form id="quoteForm" novalidate>
-            <div class="fg-row">
-              <div class="fg">
-                <label for="fname">First Name <span class="req">*</span></label>
-                <input type="text" id="fname" name="firstName" placeholder="e.g. Sarah" required autocomplete="given-name">
-              </div>
-              <div class="fg">
-                <label for="lname">Last Name <span class="req">*</span></label>
-                <input type="text" id="lname" name="lastName" placeholder="e.g. Johnson" required autocomplete="family-name">
-              </div>
-            </div>
-            <div class="fg">
-              <label for="email">Email Address <span class="req">*</span></label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
-            </div>
-            <div class="fg">
-              <label for="phone">Phone Number <span class="req">*</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="e.g. 0400 000 000" required autocomplete="tel">
-            </div>
-            <div class="fg">
-              <label for="suburb">Suburb / Location <span class="req">*</span></label>
-              <input type="text" id="suburb" name="suburb" placeholder="e.g. Sunnybank, Gold Coast, Ipswich" required>
-            </div>
-            <div class="fg-row">
-              <div class="fg">
-                <label for="ftype">Flooring Type</label>
-                <select id="ftype" name="flooringType">
-                  <option value="">— Select product —</option>
-                  <option>SPC Hybrid Flooring</option>
-                  <option>Engineered Timber</option>
-                  <option>Commercial Flooring</option>
-                  <option>Not sure — need advice</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label for="area">Approximate Area (m²)</label>
-                <select id="area" name="area">
-                  <option value="">— Select size —</option>
-                  <option>Under 30m²</option>
-                  <option>30 – 60m²</option>
-                  <option>60 – 100m²</option>
-                  <option>100 – 200m²</option>
-                  <option>200m² or more</option>
-                </select>
-              </div>
-            </div>
-            <div class="fg">
-              <label for="ptype">Project Type</label>
-              <select id="ptype" name="projectType">
-                <option value="">— Select type —</option>
-                <option>Residential — new build</option>
-                <option>Residential — renovation</option>
-                <option>Commercial — office</option>
-                <option>Commercial — retail / hospitality</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="fg">
-              <label for="msg">Additional Details</label>
-              <textarea id="msg" name="message" placeholder="Tell us about your project — current flooring, any special requirements, preferred timeline, etc."></textarea>
-            </div>
+          <iframe 
+  src="https://docs.google.com/forms/d/e/1FAIpQLSe0-35TWV9UU1DZtMuHZemr-om8aZTOH09mxdv4P1nAqYv23w/viewform?embedded=true" 
+  width="100%" 
+  height="900" 
+  frameborder="0" 
+  marginheight="0" 
+  marginwidth="0"
+  style="display:block;border-radius:4px"
+  title="Nature Flooring Quote Request">
+  Loading form…
+</iframe>
+<p style="font-size:.75rem;color:var(--gray-600);text-align:center;margin-top:.75rem">
+  Or call us directly: <a href="tel:0411958958" style="color:var(--green);font-weight:600">0411 958 958</a>
+</p>
 
-            <button type="submit" class="form-submit" id="submitBtn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Send Quote Request
-            </button>
-            <div class="form-note">
-              🔒 Your details are kept private and never shared with third parties.<br>
-              We'll call or email you within 1 business day to arrange your free consultation.
-            </div>
-            <div class="error-msg" id="errorMsg">
-              Something went wrong. Please try again or call us on <a href="tel:0411958958" style="color:var(--orange);font-weight:600">0411 958 958</a>.
-            </div>
-          </form>
-
-          <div class="success-msg" id="successMsg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h4>Quote request sent!</h4>
-            <p>Thank you! We'll be in touch within 1 business day to arrange your free in-home consultation.</p>
-            <p style="margin-top:.5rem;font-size:.82rem">Or call us now: <a href="tel:0411958958" style="color:var(--green);font-weight:600">0411 958 958</a></p>
           </div>
-        </div>
       </div>
 
     </div>
@@ -381,88 +314,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   </div>
 </footer>
 
-<script>
-// ── Google Apps Script Web App endpoint
-// INSTRUCTIONS TO OWNER:
-// 1. Go to https://script.google.com → New Project
-// 2. Paste the Apps Script code (see README or ask developer)
-// 3. Deploy as Web App → Anyone can access → Copy the Web App URL
-// 4. Replace the URL below with your Web App URL
-const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
 
-const form = document.getElementById('quoteForm');
-const btn  = document.getElementById('submitBtn');
-const successMsg = document.getElementById('successMsg');
-const errorMsg   = document.getElementById('errorMsg');
 
-form.addEventListener('submit', async function(e) {
-  e.preventDefault();
-  errorMsg.style.display = 'none';
-
-  // Basic validation
-  const required = form.querySelectorAll('[required]');
-  let valid = true;
-  required.forEach(el => {
-    el.style.borderColor = '';
-    if (!el.value.trim()) {
-      el.style.borderColor = 'var(--orange)';
-      el.focus();
-      valid = false;
-    }
-  });
-  if (!valid) return;
-
-  // Email validation
-  const emailEl = form.querySelector('#email');
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
-    emailEl.style.borderColor = 'var(--orange)';
-    emailEl.focus();
-    return;
-  }
-
-  // Loading state
-  btn.classList.add('loading');
-  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0"/></svg> Sending…';
-
-  const data = {
-    timestamp: new Date().toLocaleString('en-AU', {timeZone:'Australia/Brisbane'}),
-    firstName: form.firstName.value.trim(),
-    lastName:  form.lastName.value.trim(),
-    email:     form.email.value.trim(),
-    phone:     form.phone.value.trim(),
-    suburb:    form.suburb.value.trim(),
-    flooringType: form.flooringType.value,
-    area:      form.area.value,
-    projectType: form.projectType.value,
-    message:   form.message.value.trim(),
-    source:    'Website Quote Form',
-  };
-
-  try {
-    // Use no-cors mode to avoid CORS issues with Apps Script
-    await fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
-    });
-    // no-cors returns opaque response — assume success
-    form.style.display = 'none';
-    successMsg.style.display = 'block';
-    successMsg.scrollIntoView({behavior:'smooth', block:'center'});
-  } catch(err) {
-    btn.classList.remove('loading');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Quote Request';
-    errorMsg.style.display = 'block';
-  }
-});
-
-// Clear red border on input
-form.querySelectorAll('input,select,textarea').forEach(el => {
-  el.addEventListener('input', () => el.style.borderColor = '');
-});
-</script>
-<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 
 </body>
 </html>
