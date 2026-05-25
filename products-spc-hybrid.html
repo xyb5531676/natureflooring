@@ -109,7 +109,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .pc:hover .pi img{transform:scale(1.05)}
 .pi-bg{width:100%;height:100%;transition:transform .4s}
 .pc:hover .pi-bg{transform:scale(1.05)}
-.pbadge{position:absolute;top:.65rem;left:.65rem;color:white;font-size:.65rem;font-weight:700;padding:.25rem .65rem;border-radius:3px;letter-spacing:.03em;background:var(--orange)}
+.cc-imgs .swatch{flex:1;overflow:hidden;height:220px;min-width:0;position:relative}.pbadge{position:absolute;top:.65rem;left:.65rem;color:white;font-size:.65rem;font-weight:700;padding:.25rem .65rem;border-radius:3px;letter-spacing:.03em;background:var(--orange)}
 .pbadge.green{background:var(--green)}
 .pinfo{padding:1rem}
 .psku{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:.15rem}
@@ -160,9 +160,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .colour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
 .cc{border-radius:8px;overflow:hidden;border:1px solid var(--gray-200);transition:all .25s;background:white}
 .cc:hover{border-color:var(--green);box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-3px)}
-.cc-imgs{display:grid;grid-template-columns:1fr 1fr;height:220px}
-.cc-imgs .swatch{overflow:hidden;height:220px}
-.cc-imgs .room{overflow:hidden;height:220px;background:var(--gray-100)}
+.cc-imgs{display:flex;height:220px;overflow:hidden}
+.cc-imgs .swatch{flex:1;overflow:hidden;height:220px;min-width:0}
+.cc-imgs .room{flex:1;overflow:hidden;height:220px;min-width:0;background:var(--gray-100)}
 .cc-imgs img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .cc:hover .cc-imgs img{transform:scale(1.04)}
 .room-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--gray-400)}
@@ -327,9 +327,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
     <div class="sh"><div><h2>Colour Range — 10 Exclusive Designs</h2><p>Each colour available exclusively through Nature Flooring Australia</p></div></div>
     <div class="colour-grid">
       <div class="cc" id="hyb8001">
-        <div class="cc-imgs" style="position:relative">
-          <div class="pbadge green" style="position:absolute;top:.65rem;left:.65rem;z-index:1">Bestseller</div>
-          <div class="swatch"><img src="images/8001/HYB-8001.jpg" alt="HYB-8001 Harvest flooring texture" loading="lazy"></div>
+        <div class="cc-imgs">
+          <div class="swatch" style="position:relative"><div class="pbadge green" style="position:absolute;top:.65rem;left:.65rem;z-index:1">Bestseller</div><img src="images/8001/HYB-8001.jpg" alt="HYB-8001 Harvest flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8001/HYB-8001%20%20HARVEST.jpg" alt="HYB-8001 Harvest installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -339,9 +338,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8002">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8002/HYB-8002.jpg" alt="HYB-8002 Silver Rose flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8002/HYB-8002.jpg" alt="HYB-8002 Silver Rose flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8002/HYB-8002%20SILVER%20ROSE.jpg" alt="HYB-8002 Silver Rose installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -351,9 +350,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8003">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8003/HYB-8003.jpg" alt="HYB-8003 Dawn flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8003/HYB-8003.jpg" alt="HYB-8003 Dawn flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8003/HYB-8003%20DAWN.jpg" alt="HYB-8003 Dawn installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -363,9 +362,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8004">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8004/HYB-8004.jpg" alt="HYB-8004 Amber Valley flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8004/HYB-8004.jpg" alt="HYB-8004 Amber Valley flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8004/HYB-8004%20AMBER%20VALLEY.jpg" alt="HYB-8004 Amber Valley installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -375,9 +374,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8005">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8005/HYB-8005.jpg" alt="HYB-8005 Light Magnolia flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8005/HYB-8005.jpg" alt="HYB-8005 Light Magnolia flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8005/HYB-8005%20LIGHT%20MAGNOLIA.jpg" alt="HYB-8005 Light Magnolia installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -387,9 +386,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8006">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8006/HYB-8006.jpg" alt="HYB-8006 Morandi Spray flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8006/HYB-8006.jpg" alt="HYB-8006 Morandi Spray flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8006/HYB-8006%20MORANDI%20SPRAY.jpg" alt="HYB-8006 Morandi Spray installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -399,9 +398,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8007">
-        <div class="cc-imgs" style="position:relative">
-          <div class="pbadge " style="position:absolute;top:.65rem;left:.65rem;z-index:1">Popular</div>
-          <div class="swatch"><img src="images/8007/HYB-8007.jpg" alt="HYB-8007 Meteor Gray flooring texture" loading="lazy"></div>
+        <div class="cc-imgs">
+          <div class="swatch" style="position:relative"><div class="pbadge " style="position:absolute;top:.65rem;left:.65rem;z-index:1">Popular</div><img src="images/8007/HYB-8007.jpg" alt="HYB-8007 Meteor Gray flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8007/HYB-8007%20METREOR%20GRAY.jpg" alt="HYB-8007 Meteor Gray installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -411,9 +409,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8008">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8008/HYB-8008.jpg" alt="HYB-8008 Golden Island flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8008/HYB-8008.jpg" alt="HYB-8008 Golden Island flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8008/HYB-8008%20GOLDEN%20ISLAND.jpg" alt="HYB-8008 Golden Island installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -423,9 +421,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8009">
-        <div class="cc-imgs" style="position:relative">
-          <div class="pbadge green" style="position:absolute;top:.65rem;left:.65rem;z-index:1">Premium</div>
-          <div class="swatch"><div style="width:100%;height:100%;background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28)"></div></div>
+        <div class="cc-imgs">
+          <div class="swatch" style="position:relative"><div class="pbadge green" style="position:absolute;top:.65rem;left:.65rem;z-index:1">Premium</div><div style="width:100%;height:100%;background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28)"></div></div>
           <div class="room"><img src="images/8009/HYB%20-8009%20MIDDLE%20NIGHT.png" alt="HYB-8009 Middle Night installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
@@ -435,9 +432,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         </div>
       </div>
       <div class="cc" id="hyb8010">
-        <div class="cc-imgs" style="position:relative">
+        <div class="cc-imgs">
           
-          <div class="swatch"><img src="images/8010/HYB-8010.jpg" alt="HYB-8010 Day Break flooring texture" loading="lazy"></div>
+          <div class="swatch"><img src="images/8010/HYB-8010.jpg" alt="HYB-8010 Day Break flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
           <div class="room"><img src="images/8010/HYB-8010%20DAY%20BREAK.png" alt="HYB-8010 Day Break installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
         </div>
         <div class="cinfo">
