@@ -248,6 +248,35 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   .areas-inner{flex-direction:column;align-items:flex-start}
   .cta-cards{grid-template-columns:1fr}
 }
+
+/* MOBILE NAV */
+.hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;cursor:pointer;padding:0;background:none;border:none;flex-shrink:0}
+.hamburger span{display:block;width:100%;height:2px;background:var(--green);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:white;border-bottom:2px solid var(--green);box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:99;max-height:calc(100vh - 68px);overflow-y:auto}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:1rem 1.5rem;font-size:.95rem;font-weight:500;color:var(--gray-800);border-bottom:1px solid var(--gray-100);text-decoration:none}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--green);background:var(--green-light)}
+.mobile-menu .mm-section{padding:.5rem 1.5rem .25rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);background:var(--gray-100)}
+.mobile-menu .mm-sub{padding:.75rem 1.5rem .75rem 2.5rem;font-size:.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-100)}
+.mobile-menu .mm-sub:hover{color:var(--green);background:var(--green-light)}
+.mobile-menu .mm-cta{display:block;margin:1rem 1.5rem;padding:.85rem;background:var(--orange);color:white!important;text-align:center;border-radius:6px;font-weight:700;font-size:.9rem;border-bottom:none!important}
+.mobile-menu .mm-cta:hover{background:#d0551a!important}
+.mobile-overlay{display:none;position:fixed;inset:0;top:68px;background:rgba(0,0,0,.3);z-index:98}
+.mobile-overlay.open{display:block}
+@media(max-width:900px){
+  .hamburger{display:flex}
+  .nav-links,.nav-dropdown{display:none!important}
+  .nav-phone{display:none}
+  .btn-quote{display:none}
+}
+@media(min-width:901px){
+  .mobile-menu{display:none!important}
+  .hamburger{display:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -291,8 +320,26 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         0411 958 958
       </a>
       <a href="get-a-quote.html" class="btn-quote">Get a Free Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" style="color:var(--green);font-weight:600">Home</a>
+    <div class="mm-section">Products</div>
+    <a href="products.html" class="mm-sub">All Products</a>
+    <a href="products-spc-hybrid.html" class="mm-sub">SPC Hybrid Flooring</a>
+    <a href="services.html">Services</a>
+    <div class="mm-section">About</div>
+    <a href="about.html" class="mm-sub">About Us</a>
+    <a href="get-a-quote.html" class="mm-sub">Get a Quote</a>
+    <a href="get-a-quote.html" class="mm-cta">📋 Get a Free Quote</a>
+    <div style="padding:.75rem 1.5rem;font-size:.82rem;color:var(--gray-600)">
+      📞 <a href="tel:0411958958" style="color:var(--green);font-weight:600">0411 958 958</a>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 </nav>
 
 <!-- HERO -->
@@ -589,7 +636,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         <div class="rating-score">4.9</div>
         <div>
           <div class="rating-stars">★★★★★</div>
-          <div class="rating-count">Based on Google reviews</div>
+          <div class="rating-count">Based on 6 Google reviews</div>
         </div>
       </div>
       <div class="rating-divider"></div>
@@ -598,37 +645,70 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         Verified Google Reviews
       </div>
     </div>
-    <div class="reviews-grid">
+        <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Absolutely transformed our home. The SPC flooring looks incredible and feels so solid underfoot. The team was professional, clean, and had everything done in a day."</p>
+        <p class="review-text">"We had such a great experience with this flooring team! They helped us remove the old carpet and installed high-quality hybrid flooring in our entire home. The whole process was fast, clean, and very professional. The team was super friendly, always on time, and took care of every detail. Highly recommended for anyone looking for stress-free flooring installation and excellent service!"</p>
         <div class="review-author">
-          <div class="review-avatar">SM</div>
+          <div class="review-avatar">WC</div>
           <div>
-            <div class="review-name">Sarah M.</div>
-            <div class="review-suburb">Sunnybank Hills, QLD</div>
+            <div class="review-name">Wenlin Cao</div>
+            <div class="review-suburb">Google Review · 11 months ago</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Used Nature Flooring for our café fit-out. Great product selection, competitive pricing, and the installation crew were meticulous. Cannot recommend them enough."</p>
+        <p class="review-text">"We recently had our entire living area and hallway upgraded with beautiful hybrid flooring, and we couldn't be happier with the result! The team was punctual, professional, and worked with great attention to detail. From the first consultation to the final clean-up, everything was smooth and stress-free. Highly recommended if you're after a reliable flooring team who truly care about their work!"</p>
         <div class="review-author">
-          <div class="review-avatar" style="background:var(--orange)">JT</div>
+          <div class="review-avatar" style="background:#2E7D52">NZ</div>
           <div>
-            <div class="review-name">James T.</div>
-            <div class="review-suburb">West End, Brisbane</div>
+            <div class="review-name">Na Zhou</div>
+            <div class="review-suburb">Google Review · 11 months ago</div>
           </div>
         </div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Came out to measure and quote within 24 hours. Honest advice, no pressure whatsoever, and the floors look absolutely stunning. Would use them again in a heartbeat."</p>
+        <p class="review-text">"Highly recommend this timber flooring company! The installers were extremely friendly, professional, and very detail-oriented. The workmanship was excellent, and they were very responsible and easy to communicate with throughout the whole process. The result completely transformed my home, it looks brand new now. Couldn't be happier and would definitely recommend them to anyone!"</p>
         <div class="review-author">
-          <div class="review-avatar" style="background:#1A6B8A">LK</div>
+          <div class="review-avatar" style="background:#E8621A">FY</div>
           <div>
-            <div class="review-name">Linda K.</div>
-            <div class="review-suburb">Carindale, QLD</div>
+            <div class="review-name">Faqian Ye</div>
+            <div class="review-suburb">Google Review · Local Guide · 4 months ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I recently had my carpet replaced with hybrid flooring in our three bedrooms and the corridor, and I'm so happy with the result! The entire job was completed within just one day — really shows how efficient and experienced the team is. Communication was very clear and easy throughout the whole process. The quality of the installation is excellent, and the price was very reasonable. Highly recommend!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#1A6B8A">SS</div>
+          <div>
+            <div class="review-name">Skye Sun</div>
+            <div class="review-suburb">Google Review · 4 months ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I recently hired this team to replace my carpet with flooring, and I couldn't be happier with the entire experience! They handled everything with such professionalism — from moving all my furniture to restoring everything back to its place afterward. The whole process was seamless and only took 2 days. The new floor looks amazing! Truly a stress-free and professional service!"</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#6B4C9A">CY</div>
+          <div>
+            <div class="review-name">Caris Yu</div>
+            <div class="review-suburb">Google Review · a year ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Brisbane Nature Flooring has some amazing options! Loved their zero-formaldehyde series — super eco-friendly and no weird smells. The hardwood composite floors are so durable and scratch-resistant, perfect for high-traffic areas. Definitely worth checking out if you're around Brisbane! Service was fantastic thanks Fay Wen."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#3D5A80">YU</div>
+          <div>
+            <div class="review-name">Yuri</div>
+            <div class="review-suburb">Google Review · 7 months ago</div>
           </div>
         </div>
       </div>
@@ -752,6 +832,25 @@ document.querySelectorAll('.product-card,.service-card,.review-card,.banner-card
   el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease, transform .5s ease';
   observer.observe(el);
 });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  var ov = document.getElementById('mobileOverlay');
+  if(!btn||!menu||!ov) return;
+  function tog(v){
+    btn.classList.toggle('open',v);
+    menu.classList.toggle('open',v);
+    ov.classList.toggle('open',v);
+    document.body.style.overflow = v ? 'hidden' : '';
+  }
+  btn.addEventListener('click', function(){ tog(!menu.classList.contains('open')); });
+  ov.addEventListener('click', function(){ tog(false); });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ tog(false); });
+  });
+})();
 </script>
 </body>
 </html>

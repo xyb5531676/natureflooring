@@ -28,8 +28,8 @@ img{max-width:100%;display:block}
 nav{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:68px}
 .nav-logo{display:flex;align-items:center;gap:.75rem;margin-right:2.5rem;flex-shrink:0;text-decoration:none}
-.nav-logo-mark{display:flex;align-items:center;flex-shrink:0}
-.nav-logo-mark img{height:42px;width:auto;display:block}
+.nav-logo-mark{display:block;flex-shrink:0}
+.nav-logo-mark img{height:40px;width:auto;display:block;max-width:none}
 .nav-logo-mark svg{display:none}
 .nav-logo-text{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--green);line-height:1.15}
 .nav-logo-text span{display:block;font-weight:400;font-size:.62rem;color:var(--gray-600);letter-spacing:.04em;text-transform:uppercase}
@@ -128,6 +128,35 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 @media(max-width:900px){.about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}.about-img{display:none}.cred-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.stats{grid-template-columns:1fr}.cred-grid{grid-template-columns:1fr}}
 
+
+/* MOBILE NAV */
+.hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;cursor:pointer;padding:0;background:none;border:none;flex-shrink:0}
+.hamburger span{display:block;width:100%;height:2px;background:var(--green);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:white;border-bottom:2px solid var(--green);box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:99;max-height:calc(100vh - 68px);overflow-y:auto}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:1rem 1.5rem;font-size:.95rem;font-weight:500;color:var(--gray-800);border-bottom:1px solid var(--gray-100);text-decoration:none}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--green);background:var(--green-light)}
+.mobile-menu .mm-section{padding:.5rem 1.5rem .25rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);background:var(--gray-100)}
+.mobile-menu .mm-sub{padding:.75rem 1.5rem .75rem 2.5rem;font-size:.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-100)}
+.mobile-menu .mm-sub:hover{color:var(--green);background:var(--green-light)}
+.mobile-menu .mm-cta{display:block;margin:1rem 1.5rem;padding:.85rem;background:var(--orange);color:white!important;text-align:center;border-radius:6px;font-weight:700;font-size:.9rem;border-bottom:none!important}
+.mobile-menu .mm-cta:hover{background:#d0551a!important}
+.mobile-overlay{display:none;position:fixed;inset:0;top:68px;background:rgba(0,0,0,.3);z-index:98}
+.mobile-overlay.open{display:block}
+@media(max-width:900px){
+  .hamburger{display:flex}
+  .nav-links,.nav-dropdown{display:none!important}
+  .nav-phone{display:none}
+  .btn-quote{display:none}
+}
+@media(min-width:901px){
+  .mobile-menu{display:none!important}
+  .hamburger{display:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -167,8 +196,26 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         0411 958 958
       </a>
       <a href="get-a-quote.html" class="btn-quote">Get a Free Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <div class="mm-section">Products</div>
+    <a href="products.html" class="mm-sub">All Products</a>
+    <a href="products-spc-hybrid.html" class="mm-sub">SPC Hybrid Flooring</a>
+    <a href="services.html">Services</a>
+    <div class="mm-section">About</div>
+    <a href="about.html" class="mm-sub" style="color:var(--green);font-weight:600">About Us</a>
+    <a href="get-a-quote.html" class="mm-sub">Get a Quote</a>
+    <a href="get-a-quote.html" class="mm-cta">📋 Get a Free Quote</a>
+    <div style="padding:.75rem 1.5rem;font-size:.82rem;color:var(--gray-600)">
+      📞 <a href="tel:0411958958" style="color:var(--green);font-weight:600">0411 958 958</a>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 </nav>
 
 <div class="ph">
@@ -301,5 +348,24 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  var ov = document.getElementById('mobileOverlay');
+  if(!btn||!menu||!ov) return;
+  function tog(v){
+    btn.classList.toggle('open',v);
+    menu.classList.toggle('open',v);
+    ov.classList.toggle('open',v);
+    document.body.style.overflow = v ? 'hidden' : '';
+  }
+  btn.addEventListener('click', function(){ tog(!menu.classList.contains('open')); });
+  ov.addEventListener('click', function(){ tog(false); });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ tog(false); });
+  });
+})();
+</script>
 </body>
 </html>
