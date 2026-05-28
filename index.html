@@ -84,22 +84,8 @@ nav{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top
 .hero-img-badge-text strong{display:block;font-size:.85rem;color:var(--text);font-weight:600}
 
 /* CATEGORY BAR */
-.cats{background:white;border-bottom:1px solid var(--gray-200)}
-.cats-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;gap:0;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
-.cats-inner::-webkit-scrollbar{display:none}
-.cat-btn{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1.25rem 1.75rem;border-bottom:3px solid transparent;cursor:pointer;transition:all .2s;flex-shrink:0;font-size:.78rem;font-weight:500;color:var(--gray-600);white-space:nowrap;text-decoration:none}
-.cat-btn:hover,.cat-btn.active{color:var(--green);border-bottom-color:var(--green)}
-.cat-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;background:var(--gray-100);transition:background .2s}
-.cat-btn:hover .cat-icon,.cat-btn.active .cat-icon{background:var(--green-light)}
 
 /* PROMO BANNER */
-.promo{background:linear-gradient(135deg,var(--green) 0%,#2A7A52 100%);padding:1.5rem 2rem}
-.promo-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.promo-text{color:white}
-.promo-text h3{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:.2rem}
-.promo-text p{font-size:.85rem;opacity:.85}
-.promo-btn{background:white;color:var(--green);padding:.65rem 1.5rem;border-radius:4px;font-size:.85rem;font-weight:700;flex-shrink:0;transition:all .2s}
-.promo-btn:hover{background:var(--green-light)}
 
 /* SECTION COMMON */
 section{padding:4rem 0}
@@ -196,13 +182,6 @@ section{padding:4rem 0}
 .review-suburb{font-size:.72rem;color:var(--gray-600)}
 
 /* AREAS */
-.areas{background:var(--green);padding:3rem 0}
-.areas-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.areas-text h2{font-family:'Manrope',sans-serif;font-size:1.4rem;font-weight:800;color:white;margin-bottom:.3rem}
-.areas-text p{font-size:.88rem;color:rgba(255,255,255,.75)}
-.areas-chips{display:flex;flex-wrap:wrap;gap:.6rem}
-.area-chip{background:rgba(255,255,255,.15);color:white;padding:.4rem 1rem;border-radius:20px;font-size:.78rem;font-weight:500;border:1px solid rgba(255,255,255,.25);transition:all .2s}
-.area-chip:hover{background:rgba(255,255,255,.25)}
 
 /* CTA SECTION */
 .cta-section{background:var(--gray-800);padding:5rem 0}
@@ -245,7 +224,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   .features-inner{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:1fr}
   .reviews-grid{grid-template-columns:1fr}
-  .areas-inner{flex-direction:column;align-items:flex-start}
+  
   .cta-cards{grid-template-columns:1fr}
 }
 
@@ -280,14 +259,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 </style>
 </head>
 <body>
-
-<!-- TOP BAR -->
-<span>📍 Acacia Ridge, Brisbane QLD</span>
-  <div class="topbar-divider"></div>
-  <span>📞 <strong>0411 958 958</strong> — Free in-home quotes</span>
-</div>
-
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
@@ -701,18 +672,6 @@ All Flooring
   </div>
 </section>
 
-<div class="areas-chips">
-      <span class="area-chip">Brisbane CBD</span>
-      <span class="area-chip">Acacia Ridge</span>
-      <span class="area-chip">Sunnybank</span>
-      <span class="area-chip">Logan</span>
-      <span class="area-chip">Ipswich</span>
-      <span class="area-chip">Gold Coast</span>
-      <span class="area-chip">Redlands</span>
-      <span class="area-chip">Moreton Bay</span>
-      <span class="area-chip">Sunshine Coast</span>
-      <span class="area-chip">Toowoomba</span>
-    </div>
   </div>
 </div>
 
@@ -795,11 +754,7 @@ All Flooring
 </footer>
 
 <script>
-document.querySelectorAll('.cat-btn').forEach(btn=>{
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
-    this.classList.add('active');
-  });
+document.querySelectorAll(');
 });
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
