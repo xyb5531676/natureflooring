@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPC Hybrid Flooring — Nature Flooring</title>
-<meta name="description" content="Nature Flooring SPC Hybrid range. 10 exclusive colours, 100% waterproof, 6.5mm + 1.5mm underlay, click system. Brisbane's exclusive Nature Home distributor.">
+<title>Classique Oak Engineered Timber — Nature Flooring</title>
+<meta name="description" content="Nature Flooring Classique Oak engineered timber — 10 exclusive colours, 14mm, 2G Click system. Real hardwood multi-layer plywood. Brisbane exclusive distributor.">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
 
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -134,9 +135,13 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 @media(max-width:1024px){.pg{grid-template-columns:repeat(2,1fr)}.feat-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.pg{grid-template-columns:1fr}.feat-grid{grid-template-columns:1fr}}
 
+
+.topbar{display:none!important}
+
+/* PAGE HERO */
 .ph2{background:var(--off-white);border-bottom:1px solid var(--gray-200);padding:0}
 .ph2-inner{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.ph2-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);aspect-ratio:4/3}
+.ph2-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);aspect-ratio:4/3;background:linear-gradient(135deg,#C8A878,#D4B888)}
 .ph2-img img{width:100%;height:100%;object-fit:cover;display:block}
 .tbadges{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0}
 .tbadge{display:inline-flex;align-items:center;gap:.4rem;background:var(--green-light);color:var(--green);font-size:.75rem;font-weight:600;padding:.3rem .8rem;border-radius:20px}
@@ -145,6 +150,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .spec2-item{background:white;border:1px solid var(--gray-200);border-radius:6px;padding:.75rem 1rem}
 .spec2-l{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.2rem}
 .spec2-v{font-size:.88rem;font-weight:600;color:var(--text)}
+/* FEATURES BOX */
 .fb-box{background:var(--off-white);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:3rem 0}
 .fb-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .feat-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1.25rem}
@@ -156,11 +162,12 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .tech-row:last-child{border-bottom:none}
 .tech-row span:first-child{opacity:.75}
 .tech-row span:last-child{font-weight:600}
+/* COLOUR GRID */
 .colour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
 .cc{border-radius:8px;overflow:hidden;border:1px solid var(--gray-200);transition:all .25s;background:white}
 .cc:hover{border-color:var(--green);box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-3px)}
 .cc-imgs{display:flex;height:220px;overflow:hidden}
-.cc-imgs .swatch{flex:1;overflow:hidden;height:220px;min-width:0}
+.cc-imgs .swatch{flex:1;overflow:hidden;height:220px;min-width:0;position:relative}
 .cc-imgs .room{flex:1;overflow:hidden;height:220px;min-width:0;background:var(--gray-100)}
 .cc-imgs img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .cc:hover .cc-imgs img{transform:scale(1.04)}
@@ -169,8 +176,16 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .csku{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:.2rem}
 .cname{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
 .cdesc{font-size:.82rem;color:var(--gray-600);line-height:1.6}
-@media(max-width:1100px){.colour-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.cc-imgs .room{display:none}.cc-imgs .swatch{aspect-ratio:16/7}}
+/* SPEC TABLE */
+.spec-tbl{background:white;border:1px solid var(--gray-200);border-radius:8px;overflow:hidden;margin-top:2.5rem}
+.spec-tbl-h{background:var(--green);color:white;padding:1rem 1.5rem;font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700}
+.spec-row{display:grid;grid-template-columns:1fr 2fr;border-bottom:1px solid var(--gray-100)}
+.spec-row:last-child{border-bottom:none}
+.spec-k{padding:.75rem 1.5rem;font-size:.83rem;font-weight:600;color:var(--gray-800);background:var(--off-white)}
+.spec-v{padding:.75rem 1.5rem;font-size:.83rem;color:var(--gray-600)}
+@media(max-width:900px){.ph2-inner,.fb-inner{grid-template-columns:1fr;gap:2rem}.ph2-img{display:none}.spec2{grid-template-columns:1fr}}
+@media(max-width:600px){.colour-grid{grid-template-columns:1fr}.cc-imgs .room{display:none}.cc-imgs .swatch{aspect-ratio:16/7}}
+
 
 /* MOBILE NAV */
 .hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;cursor:pointer;padding:0;background:none;border:none;flex-shrink:0}
@@ -186,7 +201,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .mobile-menu .mm-sub{padding:.75rem 1.5rem .75rem 2.5rem;font-size:.88rem;color:var(--gray-600);border-bottom:1px solid var(--gray-100)}
 .mobile-menu .mm-sub:hover{color:var(--green);background:var(--green-light)}
 .mobile-menu .mm-cta{display:block;margin:1rem 1.5rem;padding:.85rem;background:var(--orange);color:white!important;text-align:center;border-radius:6px;font-weight:700;font-size:.9rem;border-bottom:none!important}
-.mobile-menu .mm-cta:hover{background:#d0551a!important}
 .mobile-overlay{display:none;position:fixed;inset:0;top:68px;background:rgba(0,0,0,.3);z-index:98}
 .mobile-overlay.open{display:block}
 @media(max-width:900px){
@@ -209,7 +223,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
       <div class="nav-logo-mark">
         <img src="images/logo-icon.png" alt="Nature Flooring">
       </div>
-
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -219,7 +232,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <a href="products-spc-hybrid.html">SPC Hybrid Flooring</a>
           <a href="products-classique-oak.html">Classique Oak</a>
         </div>
-      </div><a href="services.html">Services</a>
+      </div>
+      <a href="services.html">Services</a>
       <div class="nav-dropdown">
         <a href="about.html">About Us ▾</a>
         <div class="nav-dropdown-menu">
@@ -241,9 +255,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <div class="mm-section">Products</div>
-    <a href="products.html" class="mm-sub" style="color:var(--green);font-weight:600">All Products</a>
+    <a href="products.html" class="mm-sub">All Products</a>
     <a href="products-spc-hybrid.html" class="mm-sub">SPC Hybrid Flooring</a>
-    <a href="products-classique-oak.html" class="mm-sub">Classique Oak</a>
+    <a href="products-classique-oak.html" class="mm-sub" style="color:var(--green);font-weight:600">Classique Oak</a>
     <a href="services.html">Services</a>
     <div class="mm-section">About</div>
     <a href="about.html" class="mm-sub">About Us</a>
@@ -259,22 +273,22 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 <div class="ph2">
   <div class="ph2-inner">
     <div>
-      <div class="bc"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="products.html">Products</a><span class="bc-sep">›</span><span>SPC Hybrid Flooring</span></div>
-      <h1 style="font-family:'Manrope',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:.75rem">SPC Hybrid Flooring</h1>
-      <p style="font-size:1rem;color:var(--gray-600);line-height:1.7;margin-bottom:1rem">One of the best quality SPC floors available in Australia. The limestone composite core makes it 100% waterproof and odour-proof. Noise-free, non-scratch and stain resistant — ideal for families with active kids and pets.</p>
+      <div class="bc"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="products.html">Products</a><span class="bc-sep">›</span><span>Classique Oak</span></div>
+      <h1 style="font-family:'Manrope',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-bottom:.75rem">Classique Oak<br>Engineered Timber Flooring</h1>
+      <p style="font-size:1rem;color:var(--gray-600);line-height:1.7;margin-bottom:1rem">Premium 14mm engineered timber flooring with a real 2mm hardwood top layer, brushed UV lacquer finish, and 4-sided micro bevel. Classique Oak is built on a hardwood multi-layer plywood base — dimensionally stable, beautifully tactile, and available in 10 exclusive colour ways.</p>
       <div class="tbadges">
-        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>100% Waterproof</span>
-        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Noise-Free</span>
-        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Non-Scratch</span>
-        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Stain Resistant</span>
-        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Click Lock System</span>
-        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Underfloor Heating Compatible</span>
+        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Real 2mm Hardwood Top Layer</span>
+        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>2G Click System</span>
+        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Direct Stick or Floating</span>
+        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>FSC Certified</span>
+        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>ATFA Member</span>
+        <span class="tbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>ASI Accredited</span>
       </div>
       <div class="spec2">
-        <div class="spec2-item"><div class="spec2-l">Plank Size</div><div class="spec2-v">1500 × 226 × 8mm</div></div>
-        <div class="spec2-item"><div class="spec2-l">Thickness</div><div class="spec2-v">6.5mm + 1.5mm underlay</div></div>
-        <div class="spec2-item"><div class="spec2-l">Box Coverage</div><div class="spec2-v">2.034m² / 6 boards</div></div>
-        <div class="spec2-item"><div class="spec2-l">Slip Rating</div><div class="spec2-v">P2</div></div>
+        <div class="spec2-item"><div class="spec2-l">Plank Size</div><div class="spec2-v">1900 × 190mm</div></div>
+        <div class="spec2-item"><div class="spec2-l">Thickness</div><div class="spec2-v">14mm (2mm top layer)</div></div>
+        <div class="spec2-item"><div class="spec2-l">Box Coverage</div><div class="spec2-v">2.888m² / 8 boards</div></div>
+        <div class="spec2-item"><div class="spec2-l">Slip Rating</div><div class="spec2-v">P4</div></div>
       </div>
       <div style="display:flex;gap:.75rem;flex-wrap:wrap">
         <a href="get-a-quote.html" class="btn-primary">Get a Free Quote</a>
@@ -282,7 +296,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
       </div>
     </div>
     <div class="ph2-img">
-      <img src="images/Hybrid-Flooring-2024_page-0002.jpg" alt="SPC Hybrid Flooring — Nature Flooring Brisbane">
+      <!-- Replace with: <img src="images/classique-oak/hero.jpg" alt="Classique Oak installed living room"> -->
     </div>
   </div>
 </div>
@@ -290,27 +304,33 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 <div class="fb-box">
   <div class="fb-inner">
     <div>
-      <h2 style="font-family:'Manrope',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:.5rem">Features of Hybrid Flooring</h2>
-      <p style="font-size:.9rem;color:var(--gray-600);line-height:1.65">Hybrid flooring is also resistant to extremes of heat and cold with minimal expansion or contraction. Even if your home has underfloor heating or constant temperature changes, your hybrid flooring will not buckle, lift or crack.</p>
+      <h2 style="font-family:'Manrope',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:.5rem">Features of Classique Oak</h2>
+      <p style="font-size:.9rem;color:var(--gray-600);line-height:1.65">Classique Oak is engineered for the Australian climate — the multi-layer plywood base resists seasonal movement while the real hardwood top layer delivers the authentic warmth and character of natural timber. Brushed and UV lacquered for lasting beauty.</p>
       <ul class="feat-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Limestone composite core — 100% waterproof and odour-proof</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Noise-free, non-scratch, stain resistant — perfect for families</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Resistant to temperature extremes — won't buckle, lift or crack</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Compatible with underfloor heating systems</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Click-lock floating installation — can go over existing floors</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>4-Sided micro bevel for authentic plank appearance</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Acoustic Rating AAAC 6 Star · Eco Certified</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Real 2mm hardwood top layer — genuine timber look and feel</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Hardwood multi-layer plywood base — dimensionally stable</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Brushed UV Lacquer surface — durable, natural-looking finish</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>4-Sided Micro Bevel — authentic plank appearance</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>2G Click System — floating or direct stick installation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>FSC Certified · ATFA Member · ASI Accredited (ASI-ACC-026)</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>≤25% random short boards — natural variation</li>
       </ul>
     </div>
     <div class="tech-box">
-      <h3>Technical Information</h3>
-      <div class="tech-row"><span>Acoustic Rating</span><span>AAAC 6 Star L'n Tw:41 FIIC:69</span></div>
-      <div class="tech-row"><span>Fire Resistance</span><span>Smoke: 53% min · CHF &gt;11.0kW/m²</span></div>
-      <div class="tech-row"><span>Slip Rating</span><span>P2</span></div>
-      <div class="tech-row"><span>Wear Layer</span><span>0.5mm</span></div>
-      <div class="tech-row"><span>Profile</span><span>4-Sided Micro Bevel</span></div>
-      <div class="tech-row"><span>Surface</span><span>UV Coating</span></div>
-      <div class="tech-row"><span>Style</span><span>Plank · Click System</span></div>
+      <h3>Technical Specification</h3>
+      <div class="tech-row"><span>Length × Width</span><span>1900 × 190mm</span></div>
+      <div class="tech-row"><span>Total Thickness</span><span>14mm</span></div>
+      <div class="tech-row"><span>Top Layer</span><span>2mm real hardwood</span></div>
+      <div class="tech-row"><span>Timber Grade</span><span>AB CD</span></div>
+      <div class="tech-row"><span>Base</span><span>Hardwood Multi-layer Plywood</span></div>
+      <div class="tech-row"><span>Surface</span><span>Brushed UV Lacquer</span></div>
+      <div class="tech-row"><span>Edge Profile</span><span>4-Sided Micro Bevel</span></div>
+      <div class="tech-row"><span>Joining System</span><span>2G Click</span></div>
+      <div class="tech-row"><span>Supplied</span><span>2.888m² / 8 boards / 26kg</span></div>
+      <div class="tech-row"><span>Moisture Content</span><span>8% – 12%</span></div>
+      <div class="tech-row"><span>Slip Resistance</span><span>P4</span></div>
+      <div class="tech-row"><span>Acoustic Rating</span><span>L'n Tw 44 · 5 Star · FIIC 66</span></div>
+      <div class="tech-row"><span>Fire Resistance</span><span>CHF 4.3 · HF-30 4.5 kW/m²</span></div>
     </div>
   </div>
 </div>
@@ -319,155 +339,218 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   <div class="si">
     <div class="sh"><div><h2>Colour Range — 10 Exclusive Designs</h2><p>Each colour available exclusively through Nature Flooring Australia</p></div></div>
     <div class="colour-grid">
-      <div class="cc" id="hyb8001">
+      <div class="cc" id="eno-14201">
         <div class="cc-imgs">
-          <div class="swatch" style="position:relative"><div class="pbadge green" style="position:absolute;top:.65rem;left:.65rem;z-index:1">Bestseller</div><img src="images/8001/HYB-8001.jpg" alt="HYB-8001 Harvest flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8001/HYB-8001%20%20HARVEST.jpg" alt="HYB-8001 Harvest installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14201.jpg" alt="ENO-14201 Seashell™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#E8DDD0,#D4C8B8)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14201-room.jpg" alt="ENO-14201 Seashell™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8001</div>
-          <div class="cname">Harvest</div>
-          <div class="cdesc">A warm, golden oak tone that brings an inviting and natural atmosphere to any space. Harvest offers timeless grain patterns that add both comfort and modern elegance, making it ideal for living rooms and family homes.</div>
+          <div class="csku">ENO-14201</div>
+          <div class="cname">Seashell™</div>
+          <div class="cdesc">Soft creamy white with subtle natural grain — timeless, elegant, and versatile for any style of home.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8002">
+      <div class="cc" id="eno-14202">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8002/HYB-8002.jpg" alt="HYB-8002 Silver Rose flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8002/HYB-8002%20SILVER%20ROSE.jpg" alt="HYB-8002 Silver Rose installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14202.jpg" alt="ENO-14202 Raw White™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#F0EBE3,#E4DDD4)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14202-room.jpg" alt="ENO-14202 Raw White™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8002</div>
-          <div class="cname">Silver Rose</div>
-          <div class="cdesc">A soft grey-beige blend with subtle wood textures, perfect for contemporary interiors. Silver Rose creates a calm and balanced setting, enhancing brightness while maintaining a natural timber feel.</div>
+          <div class="csku">ENO-14202</div>
+          <div class="cname">Raw White™</div>
+          <div class="cdesc">Pale raw-white timber with a natural brushed surface — clean, fresh, and beautifully light.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8003">
+      <div class="cc" id="eno-14203">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8003/HYB-8003.jpg" alt="HYB-8003 Dawn flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8003/HYB-8003%20DAWN.jpg" alt="HYB-8003 Dawn installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14203.jpg" alt="ENO-14203 Natural Oak™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#C8A878,#B89868)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14203-room.jpg" alt="ENO-14203 Natural Oak™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8003</div>
-          <div class="cname">Dawn</div>
-          <div class="cdesc">A pale, airy wood colour inspired by early morning light. Dawn opens up the room visually, making it perfect for minimalist, Scandinavian or modern home styles seeking freshness and simplicity.</div>
+          <div class="csku">ENO-14203</div>
+          <div class="cname">Natural Oak™</div>
+          <div class="cdesc">Classic warm honey-oak — the quintessential timber tone, rich and inviting in any space.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8004">
+      <div class="cc" id="eno-14204">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8004/HYB-8004.jpg" alt="HYB-8004 Amber Valley flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8004/HYB-8004%20AMBER%20VALLEY.jpg" alt="HYB-8004 Amber Valley installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14204.jpg" alt="ENO-14204 Neutral White™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#DDD8CE,#CEBFB0)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14204-room.jpg" alt="ENO-14204 Neutral White™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8004</div>
-          <div class="cname">Amber Valley</div>
-          <div class="cdesc">A gentle warm-oak shade with fine grain definition. Amber Valley adds a cozy, welcoming character while keeping a refined and stylish appearance — great for bedrooms, lounges, and family areas.</div>
+          <div class="csku">ENO-14204</div>
+          <div class="cname">Neutral White™</div>
+          <div class="cdesc">A balanced neutral with cool-white undertones — modern, refined, and effortlessly sophisticated.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8005">
+      <div class="cc" id="eno-14205">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8005/HYB-8005.jpg" alt="HYB-8005 Light Magnolia flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8005/HYB-8005%20LIGHT%20MAGNOLIA.jpg" alt="HYB-8005 Light Magnolia installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14205.jpg" alt="ENO-14205 Raw Neutral™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#C4B8A4,#B0A490)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14205-room.jpg" alt="ENO-14205 Raw Neutral™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8005</div>
-          <div class="cname">Light Magnolia</div>
-          <div class="cdesc">A neutral natural-oak tone that suits almost any design theme. Light Magnolia creates a harmonious balance between warmth and brightness, making spaces feel both comfortable and spacious.</div>
+          <div class="csku">ENO-14205</div>
+          <div class="cname">Raw Neutral™</div>
+          <div class="cdesc">Muted greige tones with a raw, organic texture — perfectly at home in contemporary interiors.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8006">
+      <div class="cc" id="eno-14206">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8006/HYB-8006.jpg" alt="HYB-8006 Morandi Spray flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8006/HYB-8006%20MORANDI%20SPRAY.jpg" alt="HYB-8006 Morandi Spray installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14206.jpg" alt="ENO-14206 Light Tan™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#C8A888,#B89878)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14206-room.jpg" alt="ENO-14206 Light Tan™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8006</div>
-          <div class="cname">Morandi Spray</div>
-          <div class="cdesc">A deeper, muted brown derived from the Morandi colour palette. This tone gives interiors a sense of sophistication, stability, and modern texture — ideal for spaces needing depth and character.</div>
+          <div class="csku">ENO-14206</div>
+          <div class="cname">Light Tan™</div>
+          <div class="cdesc">Warm sandy tan with golden highlights — bright, open, and welcoming for living areas.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8007">
+      <div class="cc" id="eno-14207">
         <div class="cc-imgs">
-          <div class="swatch" style="position:relative"><div class="pbadge " style="position:absolute;top:.65rem;left:.65rem;z-index:1">Popular</div><img src="images/8007/HYB-8007.jpg" alt="HYB-8007 Meteor Gray flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8007/HYB-8007%20METREOR%20GRAY.jpg" alt="HYB-8007 Meteor Gray installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14207.jpg" alt="ENO-14207 Latte™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#A88C6C,#987C5C)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14207-room.jpg" alt="ENO-14207 Latte™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8007</div>
-          <div class="cname">Meteor Gray</div>
-          <div class="cdesc">A stylish light-grey wood colour with cool undertones. Meteor Gray enhances modern and industrial aesthetics, delivering a clean, elegant look that pairs well with white, black, and metal accents.</div>
+          <div class="csku">ENO-14207</div>
+          <div class="cname">Latte™</div>
+          <div class="cdesc">Smooth coffee-latte brown — a comforting, mid-tone timber that pairs beautifully with neutrals.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8008">
+      <div class="cc" id="eno-14208">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8008/HYB-8008.jpg" alt="HYB-8008 Golden Island flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8008/HYB-8008%20GOLDEN%20ISLAND.jpg" alt="HYB-8008 Golden Island installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14208.jpg" alt="ENO-14208 Vintage Grey™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#909088,#808078)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14208-room.jpg" alt="ENO-14208 Vintage Grey™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8008</div>
-          <div class="cname">Golden Island</div>
-          <div class="cdesc">A rich golden timber shade with strong visual presence. Golden Island brightens the room instantly, offering a luxurious and vibrant wood look — perfect for open-plan areas and high-impact designs.</div>
+          <div class="csku">ENO-14208</div>
+          <div class="cname">Vintage Grey™</div>
+          <div class="cdesc">Weathered grey with a brushed patina — dramatic, character-rich, and distinctly modern.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8009">
+      <div class="cc" id="eno-14209">
         <div class="cc-imgs">
-          <div class="swatch" style="position:relative"><div class="pbadge green" style="position:absolute;top:.65rem;left:.65rem;z-index:1">Premium</div><div style="width:100%;height:100%;background:linear-gradient(135deg,#2A1E14,#3D2B1F,#5A3C28)"></div></div>
-          <div class="room"><img src="images/8009/HYB%20-8009%20MIDDLE%20NIGHT.png" alt="HYB-8009 Middle Night installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14209.jpg" alt="ENO-14209 Smoke Brown™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#786858,#685848)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14209-room.jpg" alt="ENO-14209 Smoke Brown™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8009</div>
-          <div class="cname">Middle Night</div>
-          <div class="cdesc">A dark espresso-brown wood colour that brings drama, contrast, and elegance. Middle Night is ideal for premium interiors, creating a bold high-end atmosphere while grounding the room visually.</div>
+          <div class="csku">ENO-14209</div>
+          <div class="cname">Smoke Brown™</div>
+          <div class="cdesc">Deep smoky brown with rich depth — creates warmth and sophistication in any room.</div>
         </div>
       </div>
-      <div class="cc" id="hyb8010">
+      <div class="cc" id="eno-14210">
         <div class="cc-imgs">
-          
-          <div class="swatch"><img src="images/8010/HYB-8010.jpg" alt="HYB-8010 Day Break flooring texture" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <div class="room"><img src="images/8010/HYB-8010%20DAY%20BREAK.png" alt="HYB-8010 Day Break installed" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="swatch">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14210.jpg" alt="ENO-14210 Walnut™"> -->
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#4A3828,#3A2818)"></div>
+          </div>
+          <div class="room">
+            <!-- Replace with: <img src="images/classique-oak/ENO-14210-room.jpg" alt="ENO-14210 Walnut™ installed" style="width:100%;height:100%;object-fit:cover"> -->
+            <div class="room-ph">Photo coming soon</div>
+          </div>
         </div>
         <div class="cinfo">
-          <div class="csku">HYB-8010</div>
-          <div class="cname">Day Break</div>
-          <div class="cdesc">A soft sandy-beige wood tone reminiscent of early sunshine. Day Break feels gentle and naturally bright, perfect for creating a warm, comfortable, and stylish home environment.</div>
+          <div class="csku">ENO-14210</div>
+          <div class="cname">Walnut™</div>
+          <div class="cdesc">Dark espresso walnut — luxurious, dramatic, and perfect for premium interior spaces.</div>
         </div>
       </div>
     </div>
-  </section>
 
-<div class="chips">
-      <span class="chip">Brisbane CBD</span><span class="chip">Acacia Ridge</span>
-      <span class="chip">Sunnybank</span><span class="chip">Logan</span>
-      <span class="chip">Ipswich</span><span class="chip">Gold Coast</span>
-      <span class="chip">Redlands</span><span class="chip">Moreton Bay</span>
-      <span class="chip">Sunshine Coast</span><span class="chip">Toowoomba</span>
-    </div>
-  </div>
-</div>
-<section class="cta-s">
-  <div class="cta-inner">
-    <h2>Ready to order or see samples?</h2>
-    <p>Call us or book a free in-home consultation — we'll bring colour samples so you can see exactly how each one looks in your home's light.</p>
-    <div class="cta-btns">
-      <a href="tel:0411958958" class="btn-primary" style="background:var(--green-accent);font-size:.95rem;padding:.9rem 2rem">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8a16 16 0 006.72 6.72l1.18-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-        Call 0411 958 958
-      </a>
-      <a href="get-a-quote.html" class="btn-secondary" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.75);background:transparent">
-        Get a Free Quote
-      </a>
+    <div class="spec-tbl">
+      <div class="spec-tbl-h">Full Technical Specification — Classique Oak Engineered Timber</div>
+      <div class="spec-row"><div class="spec-k">Product Type</div><div class="spec-v">Engineered Timber Flooring</div></div>
+      <div class="spec-row"><div class="spec-k">Plank Size</div><div class="spec-v">1900 × 190mm</div></div>
+      <div class="spec-row"><div class="spec-k">Total Thickness</div><div class="spec-v">14mm</div></div>
+      <div class="spec-row"><div class="spec-k">Top Layer</div><div class="spec-v">2mm real hardwood</div></div>
+      <div class="spec-row"><div class="spec-k">Timber Grade</div><div class="spec-v">A B C D</div></div>
+      <div class="spec-row"><div class="spec-k">Base</div><div class="spec-v">Hardwood Multi-layer Plywood</div></div>
+      <div class="spec-row"><div class="spec-k">Surface Treatment</div><div class="spec-v">Brushed UV Lacquer</div></div>
+      <div class="spec-row"><div class="spec-k">Edge Profile</div><div class="spec-v">4-Sided Micro Bevel</div></div>
+      <div class="spec-row"><div class="spec-k">Joining System</div><div class="spec-v">2G Click</div></div>
+      <div class="spec-row"><div class="spec-k">Box Coverage</div><div class="spec-v">2.888m² / 8 boards</div></div>
+      <div class="spec-row"><div class="spec-k">Box Weight</div><div class="spec-v">26kg</div></div>
+      <div class="spec-row"><div class="spec-k">Short Boards</div><div class="spec-v">≤25% random short boards</div></div>
+      <div class="spec-row"><div class="spec-k">Installation</div><div class="spec-v">Direct Stick or Floating</div></div>
+      <div class="spec-row"><div class="spec-k">Moisture Content</div><div class="spec-v">8% – 12%</div></div>
+      <div class="spec-row"><div class="spec-k">Slip Resistance</div><div class="spec-v">P4</div></div>
+      <div class="spec-row"><div class="spec-k">Fire Resistance</div><div class="spec-v">CHF 4.3 kW/m² · HF-30 4.5 kW/m² · Smoke 7% min</div></div>
+      <div class="spec-row"><div class="spec-k">Acoustic Rating</div><div class="spec-v">L'n Tw 44 · 5 Star · FIIC 66</div></div>
+      <div class="spec-row"><div class="spec-k">Certifications</div><div class="spec-v">FSC® A000519 · ATFA Member · ASI Accredited ASI-ACC-026</div></div>
     </div>
   </div>
 </section>
+
+<section class="cta-s">
+  <div class="cta-inner">
+    <h2>Interested in Classique Oak?</h2>
+    <p>Book a free in-home consultation — we'll bring samples to your space and provide a clear fixed-price quote.</p>
+    <div class="cta-btns">
+      <a href="tel:0411958958" class="btn-primary" style="background:var(--green-accent);font-size:.95rem;padding:.9rem 2rem">Call 0411 958 958</a>
+      <a href="get-a-quote.html" class="btn-secondary" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.75);background:transparent">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="ft">
     <div>
       <div class="fl-text">Nature Flooring</div>
-      <div class="fl-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd.<br>Premium eco-certified flooring for residential and commercial spaces across Queensland.<br>QBCC: 15312707 · ABN: 50646948281</div>
+      <div class="fl-sub">Australia's exclusive distributor for Nature Home (China) Co., Ltd. QBCC: 15312707 · ABN: 50646948281</div>
       <div class="fl-contact">
         <div>📍 22/37 Mortimer Road, Acacia Ridge QLD 4110</div>
         <div>📞 <a href="tel:0411958958">0411 958 958</a></div>
@@ -475,59 +558,36 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         <div>🕐 Mon–Fri 9am–5pm · Sat 10am–4pm</div>
       </div>
     </div>
-    <div>
-      <div class="fh">Products</div>
-      <ul class="fl">
-        <li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li>
-        <li><a href="products.html">All Products</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fh">Services</div>
-      <ul class="fl">
-        <li><a href="services.html">Free Consultation</a></li>
-        <li><a href="services.html">Residential Installation</a></li>
-        <li><a href="services.html">Commercial Projects</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fh">Company</div>
-      <ul class="fl">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="get-a-quote.html">Get a Quote</a></li>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </div>
+    <div><div class="fh">Products</div><ul class="fl">
+      <li><a href="products-spc-hybrid.html">SPC Hybrid Flooring</a></li>
+      <li><a href="products-classique-oak.html">Classique Oak</a></li>
+      <li><a href="products.html">All Products</a></li>
+    </ul></div>
+    <div><div class="fh">Services</div><ul class="fl">
+      <li><a href="services.html">Free Consultation</a></li>
+      <li><a href="services.html">Residential Installation</a></li>
+      <li><a href="services.html">Commercial Projects</a></li>
+    </ul></div>
+    <div><div class="fh">Company</div><ul class="fl">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="get-a-quote.html">Get a Quote</a></li>
+    </ul></div>
   </div>
   <div class="fb">
-    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707 · All rights reserved</span>
-    <div class="fb-links">
-      <a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a>
-      <a href="#" style="color:rgba(255,255,255,.3)">Terms of Use</a>
-    </div>
+    <span>© 2025 Nature Flooring · ABN 50646948281 · QBCC 15312707</span>
+    <div class="fb-links"><a href="#" style="color:rgba(255,255,255,.3)">Privacy Policy</a></div>
   </div>
 </footer>
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)'}})},{threshold:.08});
-document.querySelectorAll('.cc,.fi').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s, transform .5s';obs.observe(el)});
-</script>
-<script>
 (function(){
-  var btn = document.getElementById('hamburger');
-  var menu = document.getElementById('mobileMenu');
-  var ov = document.getElementById('mobileOverlay');
-  if(!btn||!menu||!ov) return;
-  function tog(v){
-    btn.classList.toggle('open',v);
-    menu.classList.toggle('open',v);
-    ov.classList.toggle('open',v);
-    document.body.style.overflow = v ? 'hidden' : '';
-  }
-  btn.addEventListener('click', function(){ tog(!menu.classList.contains('open')); });
-  ov.addEventListener('click', function(){ tog(false); });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ tog(false); });
-  });
+  var btn=document.getElementById('hamburger');
+  var menu=document.getElementById('mobileMenu');
+  var ov=document.getElementById('mobileOverlay');
+  if(!btn||!menu||!ov)return;
+  function tog(v){btn.classList.toggle('open',v);menu.classList.toggle('open',v);ov.classList.toggle('open',v);document.body.style.overflow=v?'hidden':'';}
+  btn.addEventListener('click',function(){tog(!menu.classList.contains('open'));});
+  ov.addEventListener('click',function(){tog(false);});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){tog(false);});});
 })();
 </script>
 </body>
