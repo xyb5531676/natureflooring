@@ -109,7 +109,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .pc:hover .pi img{transform:scale(1.05)}
 .pi-bg{width:100%;height:100%;transition:transform .4s}
 .pc:hover .pi-bg{transform:scale(1.05)}
-.cc-imgs .swatch{flex:1;overflow:hidden;height:220px;min-width:0;position:relative}.pbadge{position:absolute;top:.65rem;left:.65rem;color:white;font-size:.65rem;font-weight:700;padding:.25rem .65rem;border-radius:3px;letter-spacing:.03em;background:var(--orange)}
+.cc-imgs .swatch{width:100%;overflow:hidden;height:220px;position:relative}.pbadge{position:absolute;top:.65rem;left:.65rem;color:white;font-size:.65rem;font-weight:700;padding:.25rem .65rem;border-radius:3px;letter-spacing:.03em;background:var(--orange)}
 .pbadge.green{background:var(--green)}
 .pinfo{padding:1rem}
 .psku{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:.15rem}
@@ -166,8 +166,8 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 .colour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
 .cc{border-radius:8px;overflow:hidden;border:1px solid var(--gray-200);transition:all .25s;background:white}
 .cc:hover{border-color:var(--green);box-shadow:0 8px 30px rgba(0,0,0,.1);transform:translateY(-3px)}
-.cc-imgs{display:flex;height:220px;overflow:hidden}
-.cc-imgs .swatch{flex:1;overflow:hidden;height:220px;min-width:0;position:relative}
+.cc-imgs{display:block;height:220px;overflow:hidden}
+.cc-imgs .swatch{width:100%;overflow:hidden;height:220px;position:relative}
 .cc-imgs .room{flex:1;overflow:hidden;height:220px;min-width:0;background:var(--gray-100)}
 .cc-imgs img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
 .cc:hover .cc-imgs img{transform:scale(1.04)}
@@ -296,7 +296,7 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
       </div>
     </div>
     <div class="ph2-img">
-      <!-- Replace with: <img src="images/classique-oak/hero.jpg" alt="Classique Oak installed living room"> -->
+      <img src="images/oak/ENO-14206-%20installed.png" alt="Classique Oak ENO-14206 Light Tan installed" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
   </div>
 </div>
@@ -345,10 +345,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
             <!-- Replace with: <img src="images/classique-oak/ENO-14201.jpg" alt="ENO-14201 Seashell™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#E8DDD0,#D4C8B8)"></div>
           </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14201-room.jpg" alt="ENO-14201 Seashell™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
-          </div>
         </div>
         <div class="cinfo">
           <div class="csku">ENO-14201</div>
@@ -361,10 +357,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <div class="swatch">
             <!-- Replace with: <img src="images/classique-oak/ENO-14202.jpg" alt="ENO-14202 Raw White™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#F0EBE3,#E4DDD4)"></div>
-          </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14202-room.jpg" alt="ENO-14202 Raw White™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
           </div>
         </div>
         <div class="cinfo">
@@ -379,10 +371,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
             <!-- Replace with: <img src="images/classique-oak/ENO-14203.jpg" alt="ENO-14203 Natural Oak™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#C8A878,#B89868)"></div>
           </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14203-room.jpg" alt="ENO-14203 Natural Oak™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
-          </div>
         </div>
         <div class="cinfo">
           <div class="csku">ENO-14203</div>
@@ -395,10 +383,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <div class="swatch">
             <!-- Replace with: <img src="images/classique-oak/ENO-14204.jpg" alt="ENO-14204 Neutral White™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#DDD8CE,#CEBFB0)"></div>
-          </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14204-room.jpg" alt="ENO-14204 Neutral White™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
           </div>
         </div>
         <div class="cinfo">
@@ -413,10 +397,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
             <!-- Replace with: <img src="images/classique-oak/ENO-14205.jpg" alt="ENO-14205 Raw Neutral™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#C4B8A4,#B0A490)"></div>
           </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14205-room.jpg" alt="ENO-14205 Raw Neutral™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
-          </div>
         </div>
         <div class="cinfo">
           <div class="csku">ENO-14205</div>
@@ -429,10 +409,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <div class="swatch">
             <!-- Replace with: <img src="images/classique-oak/ENO-14206.jpg" alt="ENO-14206 Light Tan™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#C8A888,#B89878)"></div>
-          </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14206-room.jpg" alt="ENO-14206 Light Tan™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
           </div>
         </div>
         <div class="cinfo">
@@ -447,10 +423,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
             <!-- Replace with: <img src="images/classique-oak/ENO-14207.jpg" alt="ENO-14207 Latte™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#A88C6C,#987C5C)"></div>
           </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14207-room.jpg" alt="ENO-14207 Latte™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
-          </div>
         </div>
         <div class="cinfo">
           <div class="csku">ENO-14207</div>
@@ -463,10 +435,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <div class="swatch">
             <!-- Replace with: <img src="images/classique-oak/ENO-14208.jpg" alt="ENO-14208 Vintage Grey™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#909088,#808078)"></div>
-          </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14208-room.jpg" alt="ENO-14208 Vintage Grey™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
           </div>
         </div>
         <div class="cinfo">
@@ -481,10 +449,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
             <!-- Replace with: <img src="images/classique-oak/ENO-14209.jpg" alt="ENO-14209 Smoke Brown™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#786858,#685848)"></div>
           </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14209-room.jpg" alt="ENO-14209 Smoke Brown™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
-          </div>
         </div>
         <div class="cinfo">
           <div class="csku">ENO-14209</div>
@@ -497,10 +461,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
           <div class="swatch">
             <!-- Replace with: <img src="images/classique-oak/ENO-14210.jpg" alt="ENO-14210 Walnut™"> -->
             <div style="width:100%;height:100%;background:linear-gradient(135deg,#4A3828,#3A2818)"></div>
-          </div>
-          <div class="room">
-            <!-- Replace with: <img src="images/classique-oak/ENO-14210-room.jpg" alt="ENO-14210 Walnut™ installed" style="width:100%;height:100%;object-fit:cover"> -->
-            <div class="room-ph">Photo coming soon</div>
           </div>
         </div>
         <div class="cinfo">
