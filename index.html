@@ -57,31 +57,25 @@ nav{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top
 .btn-quote{background:var(--orange);color:white;padding:.55rem 1.3rem;border-radius:4px;font-size:.85rem;font-weight:600;transition:background .2s}
 .btn-quote:hover{background:#d0551a}
 /* HERO */
-.hero{background:var(--off-white);overflow:hidden}
-.hero-inner{max-width:1280px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green);font-size:.75rem;font-weight:600;padding:.35rem .85rem;border-radius:20px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1.25rem}
+.hero{position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(15,30,20,.78) 0%,rgba(15,30,20,.62) 35%,rgba(15,30,20,.25) 60%,rgba(15,30,20,.05) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:4rem 2rem;width:100%}
+.hero-content{max-width:560px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.18);color:#fff;font-size:.75rem;font-weight:600;padding:.35rem .85rem;border-radius:20px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:1.25rem;backdrop-filter:blur(4px)}
 .hero-eyebrow svg{width:14px;height:14px}
-.hero-title{font-family:'Manrope',sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:800;line-height:1.15;color:var(--text);margin-bottom:1rem}
-.hero-title em{font-style:normal;color:var(--green)}
-.hero-subtitle{font-size:1rem;color:var(--gray-600);line-height:1.7;margin-bottom:2rem;max-width:480px}
+.hero-title{font-family:'Manrope',sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:1.75rem;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.hero-title em{font-style:normal;color:#9fd9a8}
 .hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap}
 .btn-primary{background:var(--green);color:white;padding:.8rem 1.8rem;border-radius:4px;font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:.5rem;transition:background .2s}
 .btn-primary:hover{background:var(--green-mid)}
 .btn-primary svg{width:16px;height:16px}
 .btn-secondary{background:white;color:var(--green);padding:.8rem 1.8rem;border-radius:4px;font-size:.9rem;font-weight:600;border:2px solid var(--green);display:inline-flex;align-items:center;gap:.5rem;transition:all .2s}
 .btn-secondary:hover{background:var(--green-light)}
 .hero-trust{display:flex;gap:1.5rem;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--gray-600)}
-.trust-item svg{width:16px;height:16px;color:var(--green);flex-shrink:0}
-.hero-img{border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12)}
-.hero-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
-.hero-img-placeholder{background:linear-gradient(135deg,#8B6B45 0%,#A07850 40%,#C4A070 70%,#D4B88A 100%);aspect-ratio:4/3;position:relative;display:flex;align-items:flex-end;padding:1rem}
-.hero-img-placeholder::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(0,0,0,.04) 80px,rgba(0,0,0,.04) 82px),repeating-linear-gradient(0deg,transparent,transparent 200px,rgba(0,0,0,.03) 200px,rgba(0,0,0,.03) 202px)}
-.hero-img-badge{background:white;border-radius:6px;padding:.65rem 1rem;display:flex;align-items:center;gap:.6rem;box-shadow:0 4px 16px rgba(0,0,0,.15);position:relative;z-index:1}
-.hero-img-badge-icon{width:32px;height:32px;background:var(--green-light);border-radius:4px;display:flex;align-items:center;justify-content:center}
-.hero-img-badge-icon svg{width:18px;height:18px;color:var(--green)}
-.hero-img-badge-text{font-size:.72rem;color:var(--gray-600);line-height:1.3}
-.hero-img-badge-text strong{display:block;font-size:.85rem;color:var(--text);font-weight:600}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:rgba(255,255,255,.92);text-shadow:0 1px 6px rgba(0,0,0,.3)}
+.trust-item svg{width:16px;height:16px;color:#9fd9a8;flex-shrink:0}
 
 /* CATEGORY BAR */
 
@@ -199,8 +193,9 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
   footer .footer-top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .hero-inner{grid-template-columns:1fr}
-  .hero-img{display:none}
+  .hero{min-height:auto}
+  .hero-inner{padding:3rem 1.5rem}
+  .hero-overlay{background:linear-gradient(180deg,rgba(15,30,20,.55) 0%,rgba(15,30,20,.7) 100%)}
   .nav-links{display:none}
   .features-inner{grid-template-columns:1fr 1fr}
   .services-grid{grid-template-columns:1fr}
@@ -295,8 +290,10 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
 
 <!-- HERO -->
 <div class="hero">
+  <img class="hero-bg" src="images/mainpic.jpg" alt="Nature SPC Hybrid Flooring - Brisbane">
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div>
+    <div class="hero-content">
       <div class="hero-eyebrow">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Eco-Certified
@@ -328,20 +325,6 @@ footer{background:#111110;color:rgba(255,255,255,.5)}
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
           QBCC Licensed · ABN 65 679 040 969
-        </div>
-      </div>
-    </div>
-    <div class="hero-img">
-      <div class="hero-img-placeholder" style="position:relative">
-        <img src="images/mainpic.jpg" alt="Nature SPC Hybrid Flooring - Brisbane" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
-        <div class="hero-img-badge" style="position:absolute;bottom:1rem;left:1rem;z-index:1">
-          <div class="hero-img-badge-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div class="hero-img-badge-text">
-            <strong>Eco Certified</strong>
-            International health standard
-          </div>
         </div>
       </div>
     </div>
